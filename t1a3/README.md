@@ -6,13 +6,13 @@
 ![Twitter Follow](https://img.shields.io/twitter/follow/simo_sultan?style=social)
 
 
-Source code: [https://github.com/SimoSultan/coding-bootcamp-text-adventure](https://github.com/SimoSultan/coding-bootcamp-text-adventure)
+Source code: [https://github.com/SimoSultan/ca-assignments/tree/master/t1a3](https://github.com/SimoSultan/ca-assignments/tree/master/t1a3)
 
 
 Files:
 <!-- - [Help](https://github.com/SimoSultan/coding-bootcamp-text-adventure/blob/master/docs/help.md) -->
-- [Development log](https://github.com/SimoSultan/portfolio-website/blob/master/docs/development-log.md)
-- [Software Development Plan](https://github.com/SimoSultan/portfolio-website/blob/master/docs/software-development-plan.md)
+- [Development log](https://github.com/SimoSultan/ca-assignments/blob/master/t1a3/docs/dev-log.md)
+- [Software Development Plan](https://github.com/SimoSultan/ca-assignments/blob/master/t1a3/docs/sdp.md)
 <!-- - [Flow Chart](https://github.com/SimoSultan/coding-bootcamp-text-adventure/blob/master/docs/flow-chart-updated/entire-app-flow.jpg) -->
 - [Trello Board](https://trello.com/b/5zC6lx3A/simosultans-portfolio-website)
 
