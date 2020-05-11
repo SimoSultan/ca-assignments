@@ -10,10 +10,9 @@ Source code: [https://github.com/SimoSultan/ca-assignments/tree/master/t1a3](htt
 
 
 Files:
-<!-- - [Help](https://github.com/SimoSultan/coding-bootcamp-text-adventure/blob/master/docs/help.md) -->
 - [Development log](https://github.com/SimoSultan/ca-assignments/blob/master/t1a3/docs/dev-log.md)
 - [Software Development Plan](https://github.com/SimoSultan/ca-assignments/blob/master/t1a3/docs/sdp.md)
-<!-- - [Wireframe](https://github.com/SimoSultan/coding-bootcamp-text-adventure/blob/master/docs/flow-chart-updated/entire-app-flow.jpg) -->
+- [Wireframe](https://github.com/SimoSultan/ca-assignments/blob/master/t1a3/docs/portfolio-wireframe.bmpr)
 - [Trello Board](https://trello.com/b/5zC6lx3A/simosultans-portfolio-website)
 
 
@@ -92,8 +91,7 @@ And spoiler alert, but the goal of this game is to graduate and get a job. Compl
 
 [My Trello Board](https://trello.com/b/5zC6lx3A/simosultans-portfolio-website)
 
-<!-- ![Trello Board Screenshot](https://github.com/SimoSultan/coding-bootcamp-text-adventure/blob/master/docs/implementation-plan-trello-board.png) -->
-
+![Wireframe Screenshot](https://github.com/SimoSultan/ca-assignments/blob/master/t1a3/docs/wireframe-screenshot.jpg)
 
 [Development Log](https://github.com/SimoSultan/ca-assignments/blob/master/t1a3/docs/dev-log.md)
 
