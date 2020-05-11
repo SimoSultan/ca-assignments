@@ -1,7 +1,7 @@
 ![Portfolio Website]()
 
 
-## YOUR CODING JOURNEY
+## SIMO_SULTAN'S PORTFOLIO WEBSITE
 ![GitHub followers](https://img.shields.io/github/followers/SimoSultan?style=social)
 ![Twitter Follow](https://img.shields.io/twitter/follow/simo_sultan?style=social)
 
@@ -13,7 +13,7 @@ Files:
 <!-- - [Help](https://github.com/SimoSultan/coding-bootcamp-text-adventure/blob/master/docs/help.md) -->
 - [Development log](https://github.com/SimoSultan/ca-assignments/blob/master/t1a3/docs/dev-log.md)
 - [Software Development Plan](https://github.com/SimoSultan/ca-assignments/blob/master/t1a3/docs/sdp.md)
-<!-- - [Flow Chart](https://github.com/SimoSultan/coding-bootcamp-text-adventure/blob/master/docs/flow-chart-updated/entire-app-flow.jpg) -->
+<!-- - [Wireframe](https://github.com/SimoSultan/coding-bootcamp-text-adventure/blob/master/docs/flow-chart-updated/entire-app-flow.jpg) -->
 - [Trello Board](https://trello.com/b/5zC6lx3A/simosultans-portfolio-website)
 
 
@@ -90,12 +90,12 @@ And spoiler alert, but the goal of this game is to graduate and get a job. Compl
 
 <!-- ![Your Coding Journey Flowchart](https://github.com/SimoSultan/coding-bootcamp-text-adventure/blob/master/docs/flow-chart-updated/entire-app-flow.jpg) -->
 
-[My Trello Board](https://trello.com/b/hdiSXwWJ/codingbootcamptextadventure)
+[My Trello Board](https://trello.com/b/5zC6lx3A/simosultans-portfolio-website)
 
 <!-- ![Trello Board Screenshot](https://github.com/SimoSultan/coding-bootcamp-text-adventure/blob/master/docs/implementation-plan-trello-board.png) -->
 
 
-[Development Log](https://github.com/SimoSultan/coding-bootcamp-text-adventure/blob/master/docs/development-log.md)
+[Development Log](https://github.com/SimoSultan/ca-assignments/blob/master/t1a3/docs/dev-log.md)
 
 <!-- [Google Slide Presentation](https://docs.google.com/presentation/d/1skDW5dOQmxmbZVYYjgGwsOtw0axuxGczf0Pi4Acf4y8/edit#slide=id.g8422e20969_1_91) -->
 
