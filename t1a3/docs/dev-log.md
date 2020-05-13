@@ -6,33 +6,26 @@
 ----
 ### with status updates:
 
-> Monday 20th April 2020
+> Tues 12th May 2020
 
-<!-- - 20/04/20 `11:00` - **Brainstorming before receiving Project**
-- 20/04/20 `12:00` - **Develop Flow Chart**
-- 20/04/20 `14:30` - **App/game idea confirmed with small adjustments**
-- 20/04/20 `3:00` - **Outlined tasks in [Trello Board](https://trello.com/b/hdiSXwWJ/codingbootcamptextadventure)**
-- 20/04/20 `16:00` - **Outlined Statement of Purpose**
-- 20/04/20 `19:00` - **Developed list of Methods, Modules and Classes** -->
+- 12/05/20 `09:00` - **Created folder structure**
+- 12/05/20 `09:15` - **Created and outlined tasks in [Trello Board](https://trello.com/b/5zC6lx3A/simosultans-portfolio-website)**
+- 12/05/20 `09:30` - **Created basic wireframe frames in Balsamiq**
+- 12/05/20 `09:45` - **Created documentation files and linked them all**
+- 12/05/20 `14:30` - **Flushing out all wireframes**
+- 12/05/20 `23:59` - **Finished all wireframes and have solid idea of how I want my website to look**
 
-> Tuesday 21st April 2020
 
-<!-- - 21/04/20 `08:00` - **Developed list of features**
-- 21/04/20 `09:00` - **Decided to drop assignments as a challenge for time constraints. Added them as a Nice to Have feature**
-- 21/04/20 `10:00` - **Developed basic UI/UX**
-- 21/04/20 `10:15` - **Determine which Gems to use**
-- 21/04/20 `10:30` - **Developed testing criteria**
-- 21/04/20 `11:30` - **Set out folder and file structure**
-- 21/04/20 `12:00` - **Started programming base methods and classes**
-- 21/04/20 `14:00` - **Set out main game loop with pseudo and placeholder text**
-- 21/04/20 `16:00` - **Flushing out Extra Activities Class**
-- 21/04/20 `18:00` - **Twitter grandchild class functioning**
-- 21/04/20 `21:00` - **Twitter class triggers parent & grandparent class**
-- 21/04/20 `23:00` - **Player's EXP is updating properly with trigger of Twitter**
-- 21/04/20 `23:30` - **Player's instance functions working** -->
+> Wed 13th May 2020
 
-> Wednesday 22nd April 2020
+- 13/05/20 `09:15` - **Received rubric of t1a3**
+- 13/05/20 `10:00` - **Added pictures of inspiration to wireframes**
+- 13/05/20 `12:00` - **Updating dev-log**
 
+
+ > Thurs 14th May 2020
+
+- 14/05/20 `09:15` - **xxxx**
 <!-- - 22/04/20 `00:00` - **Show player's level method working**
 - 22/04/20 `09:00` - **Started planning Challenge class and methods more in depth**
 - 22/04/20 `09:30` - **Creating Challenge instance works**
