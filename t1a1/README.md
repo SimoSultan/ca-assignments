@@ -3,7 +3,7 @@
 ![GitHub followers](https://img.shields.io/github/followers/SimoSultan?style=social)  
 ![Twitter Follow](https://img.shields.io/twitter/follow/simo_sultan?style=social)
 
-#### Naviation:
+#### Navigation:
 - [**Q1**](#Q1) - History of the internet
 - [**Q2**](#Q2) - Internet Technologies: Part 1
 - [**Q3**](#Q3) - Internet Technologies: Part 2
@@ -537,7 +537,9 @@ My Ruby code that solves the problem can be found [here](https://github.com/Simo
 
 My Ruby program that solves the problem can be found [here](https://github.com/SimoSultan/ca-assignments/blob/master/t1a1/docs/q16_tests.rb). Additionally, I have used 'test/unit' gem to test the code. Which is found [here](). 
 
+***
 
 
+[Go to Navigation at Top](#Navigation).
 
 
