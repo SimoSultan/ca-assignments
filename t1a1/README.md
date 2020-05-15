@@ -147,14 +147,14 @@ What a web browser does, is best described by the process that happens when some
    1. Processes HTML and CSS into a render tree.
    2. Runs the layout on the render tree to compute the geometry of each node.
    3. Paints the individual nodes to the screen.
-5. Browser sends additional requests for objects embedded in the HTML file (CSS files, images, javascript, etc.)
+5. Browser sends additional requests for objects embedded in the HTML file (CSS files, images, javascript, etc.) [3]
 
 As explained, there is a great deal happening when a user requests a website, and, we can actually monitor a HTTP Requests and Responses with DevTools. A developer can use this to find ways to reduce load times or find an error that causes their site to load slowly. DevTools is also used to look at the code behind a website, this can be a source of learning, developing, debugging and altering the code. DevTools is a powerful tool for a developer in web design.
 
 ***Resources Used:***  
 [1] [SearchNetworking](https://searchnetworking.techtarget.com/definition/packet)  
 [2] [GlobalSign](https://www.globalsign.com/en/blog/the-difference-between-http-and-https)  
-[3]
+[3] [Khan Academy](https://www.khanacademy.org/computing/ap-computer-science-principles/the-internet/http-html/a/hypertext-transfer-protocol-http)
 
 *** 
 
