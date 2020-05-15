@@ -1,4 +1,4 @@
-# T1A1
+# T1A1 - Workbook
 ##### By Simon Curran
 ![GitHub followers](https://img.shields.io/github/followers/SimoSultan?style=social)  
 ![Twitter Follow](https://img.shields.io/twitter/follow/simo_sultan?style=social)
