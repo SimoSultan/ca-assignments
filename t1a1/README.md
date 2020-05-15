@@ -191,93 +191,101 @@ I cheated and picked 2 topics for this category due to how they complement each 
 #### 1. Interpreters
 
 In a nutshell, Compilers and Interpreters do the same job, which is converting higher level programming languages to machine code. A high level language for example are languages like Ruby and JavaScript etc, that humans use to instruct the computer what to do. However, computer processors only understand binary, 1s and 0s, which is machine code. This is where interpreters and compilers come in to help us out.  
-Languages like Ruby and Python use this program. An Interpreter translates one statement at a time and it will continue translating until the first error is met, which makes debugging a lot easier as the program stops when it runs into a bug in the code. The drawback however, is that interpreted code runs slower. Luckily for us web developers though, interpreters are more efficient due to their nature of being quick at debugging small regular changes. Also making interpreters a great tool for students in a learning environment as it allows them to program interactively.  
-
-***Resources Used:***
-[Guru99](https://www.guru99.com/difference-compiler-vs-interpreter.html), 
-[Programiz](https://www.programiz.com/article/difference-compiler-interpreter), 
-[Webopedia](https://www.techopedia.com/definition/7793/interpreter)
+Languages like Ruby and Python use this program. An Interpreter translates one statement at a time and it will continue translating until the first error is met, which makes debugging a lot easier as the program stops when it runs into a bug in the code. The drawback however, is that interpreted code runs slower. Luckily for us web developers though, interpreters are more efficient due to their nature of being quick at debugging small regular changes. Also making interpreters a great tool for students in a learning environment as it allows them to program interactively. [1] [2] [3] 
 
 #### 2. Compilers
 
 On the other hand, a compiler works by converting human written code into machine code before running. This can obviously take some time to process, however, the program runs faster as it has already read the code by the time of operation. But unfortunately, this also makes debugging quite difficult as it will display all errors at the same time after compilation. Compilers are used by languages such as C, C++, C# and Java to name a few.
 
-To explain how a compiler works is difficult because they are quite complicated. This is a very brief overview of the main stages in the process, thanks to Dima at [StackExchange](https://softwareengineering.stackexchange.com/questions/118586/how-does-a-compiler-work).
+To explain how a compiler works is difficult because they are quite complicated. This is a very brief overview of the main stages in the process, thanks to Dima at StackExchange [4].
 > 1. **Lexing** - break up the text of the program into "tokens". These tokens are the "words" of the programming language, such as identifiers (keywords, variable names, function names, etc.) or operators (=, *, &, etc.).
 > 2. **Parsing** - convert the sequence of tokens into a parse tree, which is a data structure representing various language constructs: type declarations, variable declarations, function definitions, loops, conditionals, expressions, etc.
 > 3. **Optimization** - evaluate constant expressions, optimize away unused variables or unreachable code, unroll loops if possible, etc.
 > 4. **Translate** the parse tree into machine instructions (or JVM byte code).
 
 
+***Resources Used:***  
+[1] [Guru99](https://www.guru99.com/difference-compiler-vs-interpreter.html)    
+[2] [Programiz](https://www.programiz.com/article/difference-compiler-interpreter)  
+[3] [Webopedia](https://www.techopedia.com/definition/7793/interpreter)  
+[4] [StackExchange](https://softwareengineering.stackexchange.com/questions/118586/how-does-a-compiler-work).
+
+
 ***
+
+
+
 ## Q6:
+
+I chose 2 of some of the most popular languages out there right now as I felt it encourages great talking points in current society.
 
 ### **1. Javascript**
 
-#### Advantages
+- #### *Advantages*
 
-- **Speed**  
-JavaScript tends to be very fast because it is often run immediately within the client's browser. So long as it doesn't require outside resources, JavaScript isn't slowed down by calls to a backend server. Also, major browsers all support JIT (just-in-time) compilation for JavaScript, meaning that there's no need to compile the code before running it.  
+ **Speed**  
+JavaScript is very fast because it is often run immediately within the client's browser. If it doesn't require outside resources, JavaScript doesn't get slowed down by calls to a backend server. Also, major browsers all support JIT (just-in-time) compilation, meaning that there's no need to compile the code before running it. Meaning it is an interpreted language.
 
-- **Simplicity**  
-JavaScript's syntax was inspired by Java's and is relatively easy to learn compared to other popular languages like C++.  
+**Simplicity**  
+Relatively easy to learn compared to other popular languages like C++ as its syntax was inspired by Java's.
 
-- **Popularity**  
-JavaScript is everywhere on the web, and with the advent of Node.js, is increasingly used on the backend. There are countless resources to learn JavaScript. Both StackOverflow and GitHub show an increasing amount of projects that use JavaScript, and the traction it's gained in recent years is only expected to increase.  
+**Popularity**  
+Both StackOverflow and GitHub show that JavaScript is on an increasing trend, as it can be found everywhere on the web. And with Node.js, is increasingly used on the backend. Because of its popularity, there are countless resources to learn JavaScript as well. 
 
-- **Interoperability**  
-Unlike PHP or other scripting languages, JavaScript can be inserted into any web page. JavaScript can be used in many different kinds of applications because of support in other languages like Pearl and PHP.
-Server Load - JavaScript is client-side, so it reduces the demand on servers overall, and simple applications may not need a server at all.
-Rich interfaces - JavaScript can be used to create features like drag and drop and components such as sliders, all of which greatly enhance the user interface and experience of a site.
+**Server Load** - JavaScript is client-side, reducing the demand on servers overall.
 
-- **Versatility**  
-There are many ways to use JavaScript through Node.js servers. If you were to bootstrap Node.js with Express, use a document database like MongoDB, and use JavaScript on the frontend for clients, it is possible to develop an entire JavaScript app from front to back using only JavaScript.
-Updates - Since the advent of ECMAScript 5 (the scripting specification that JavaScript relies on), ECMA International has been dedicated to updating JavaScript annually.
+**Rich interfaces** - JavaScript can greatly enhance the user interface and experience as it can be used to create features like drag and drop and components such as sliders.
 
-#### Disadvantages
+**Versatility**  
+It is possible to develop an entire app from front-end to back-end using only JavaScript. 
 
-- **Client-Side Security**  
-Since JavaScript code is executed on the client-side, bugs and oversights can sometimes be exploited for malicious purposes. Because of this, some people choose to disable JavaScript entirely.  
+**Constant Updates** - JavaScript has been dedicated to be updated annually by ECMA International.
 
-- **Browser Support**  
-While server-side scripts always produce the same output, different browsers sometimes interpret JavaScript code differently. These days the differences are minimal, and you shouldn't have to worry about it as long as you test your script in all major browsers. [1]
+- #### *Disadvantages*
 
+**Client-Side Security**  
+Bugs and oversights can sometimes be exploited for malicious purposes since JavaScript code is executed on the client-side. Because of this, some people choose to disable JavaScript entirely.  
 
-### **Python**
-
-#### Advantages
-- **Easy to Read, Learn and Write**  
-Python is a high-level programming language that has English-like syntax. This makes it easier to read and understand the code. Python is really easy to pick up and learn, that is why a lot of people recommend Python to beginners. You need less lines of code to perform the same task as compared to other major languages like C/C++ and Java.
-
-- **Improved Productivity**  
-Python is a very productive language. Due to the simplicity of Python, developers can focus on solving the problem. They don’t need to spend too much time in understanding the syntax or behaviour of the programming language. You write less code and get more things done.
-
-- **Interpreted Language**  
-Python is an interpreted language which means that Python directly executes the code line by line. In case of any error, it stops further execution and reports back the error which has occurred. Python shows only one error even if the program has multiple errors. This makes debugging easier.
-
-- **Dynamically Typed**  
-Python doesn’t know the type of variable until we run the code. It automatically assigns the data type during execution. The programmer doesn’t need to worry about declaring variables and their data types.
-
-- **Free and Open-Source**  
-Python comes under the OSI approved open-source license. This makes it free to use and distribute. You can download the source code, modify it and even distribute your version of Python. This is useful for organizations that want to modify some specific behaviour and use their version for development.
+**Browser Support**  
+While server-side scripts always produce the same output, different browsers sometimes interpret JavaScript code differently. However, the differences are minimal these days, as long as the code is tested in each browser it is not really to worry about. [1]
 
 
-#### Disadvantages
+### **2. Python**
 
-- **Slow Speed**  
-We discussed above that Python is an interpreted language and dynamically-typed language. The line by line execution of code often leads to slow execution. The dynamic nature of Python is also responsible for the slow speed of Python because it has to do the extra work while executing code. So, Python is not used for purposes where speed is an important aspect of the project.
+- #### *Advantages*
+**Easy to Read, Learn and Write**  
+Python is a high-level programming language that has English-like syntax. Making it easier to write understand the code. Python is really easy to pick up and learn, which is why it is recommended to a lot of people. As it needs less lines of code to perform the same task as compared to other major languages like C/C++ and Java.
 
-- **Not Memory Efficient**  
-To provide simplicity to the developer, Python has to do a little tradeoff. The Python programming language uses a large amount of memory. This can be a disadvantage while building applications when we prefer memory optimization. Any doubts in Python advantages and disadvantages till now? Mention in the comment section. We will be happy to help you!!
+**Improved Productivity**  
+The less time one spends on understanding the syntax and behaviour of the language, the more time that person has to get more things done with less code. Making Python a very productive language due to its simplicity, developers can focus on solving the problem at hand. 
 
-- **Weak in Mobile Computing**  
-Python is generally used in server-side programming. We don’t get to see Python on the client-side or mobile applications because of the following reasons. Python is not memory efficient and it has slow processing power as compared to other languages.
+**Interpreted Language**  
+Debugging is easier due to the fact that Python is an interpreted language. Which means that it executes the code one line at a time. In case of an error, Python will stop further execution and report back the error that has occurred. It only shows one error, even if the program has multiple errors.
 
-- **Database Access**  
-Programming in Python is easy and stress-free. But when we are interacting with the database, it lacks behind. The Python’s database access layer is primitive and underdeveloped in comparison to the popular technologies like JDBC and ODBC. Huge enterprises need smooth interaction of complex legacy data and Python is thus rarely used in enterprises.
+**Dynamically Typed**  
+The programmer doesn’t need to worry about declaring variables and their data types because Python doesn’t know the type of variable until it runs the code. It will automatically assign the data type during execution. 
 
-- **Runtime Errors**  
-As we know Python is a dynamically typed language so the data type of a variable can change anytime. A variable containing integer number may hold a string in the future, which can lead to Runtime Errors. Therefore Python programmers need to perform thorough testing of the applications. Python is a simple, versatile and a complete programming language. It is a great choice for beginners up to professionals. Although it has some disadvantages, we can observe that the advantages exceed the disadvantages. Even Google has made Python one of its primary programming languages. [2]
+**Free and Open-Source**  
+Python is free to use and distribute and comes under the OSI approved open-source license. You can download the source code, modify it and even distribute your own version of Python. This is useful for organizations that want to modify some specific behaviour and use their version for development.
+
+
+- #### *Disadvantages*
+
+**Slow Speed**  
+As discussed above, Python is an interpreted language and also dynamically-typed. This means that the line by line execution of code often leads to slow runtime. It is a double edged-sword, because the dynamic nature of Python is also responsible for the slow speed as it has to do extra work while executing the code. Therefore, Python is not used for purposes where speed is an important aspect of the project.
+
+**Not Memory Efficient**  
+The Python programming language uses a large amount of memory. This can be a disadvantage while building applications when we prefer memory optimization. 
+
+**Weak in Mobile Computing**  
+Python is not memory efficient and it has slow processing power as compared to other languages. Therefore, it is generally used in server-side programming and it is not generally seen on client-side or mobile applications.
+
+**Database Access**  
+Python is rarely used in large enterprises where they have a need for smooth interaction of complex data.
+This is because when interacting with the database, the access layer is primitive and underdeveloped in comparison to the popular technologies like JDBC and ODBC. 
+
+**Runtime Errors**  
+Because Python is dynamically typed language, the data type of a variable can change at anytime. A variable that once contained an integer may now hold a string, which could lead to a Runtime Error. Therefore thorough testing of the applications is required. To sum up. Python is a simple, versatile and a complete programming language. Making it a great choice for beginners up to professionals. And although it does have some disadvantages, it is clearly seen the advantages far outweigh the disadvantages. Even Google has made Python one of its primary programming languages. [2]
 
 ***Resources Used:***  
 [1] [freeCodeCamp](https://www.freecodecamp.org/news/the-advantages-and-disadvantages-of-javascript/)  
