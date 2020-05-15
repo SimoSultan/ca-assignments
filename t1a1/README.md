@@ -543,3 +543,7 @@ My Ruby program that solves the problem can be found [here](https://github.com/S
 [Go to Navigation at Top](#Navigation).
 
 
+***
+
+## Author
+Simon Curran
