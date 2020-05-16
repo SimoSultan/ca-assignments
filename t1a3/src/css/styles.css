@@ -1,10 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap");
 body {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+
+p {
+  margin: none;
+}
+
+a {
+  padding: 0;
+  margin: 0;
+}
+
+.iconify {
+  width: 42px;
+  height: 42px;
+  color: black;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.body-container {
+  width: 100%;
+  height: 100%;
+}
+
+.circle-img {
+  border-radius: 50%;
+}
+
+.card-profile-img {
+  width: 70%;
+}
+
+#home-container {
+  -ms-grid-rows: 2fr 1fr;
+      grid-template-rows: 2fr 1fr;
+  background-image: url(./../img/bkgd-cable.jpg);
+  background-repeat: no-repeat;
+  background-position-x: -100px;
+  background-size: cover;
+}
+
+#home-container #profile-container {
+  height: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#home-container #profile-container #profile-container-card {
+  -ms-grid-rows: 15% 73% 12%;
+      grid-template-rows: 15% 73% 12%;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 0px 40px 15px rgba(0, 89, 145, 0.8);
+  box-shadow: 0px 0px 40px 15px rgba(0, 89, 145, 0.8);
+  box-shadow: 0px 0px 40px 15px rgba(0, 89, 145, 0.8);
+  background: #0179b5;
+  background: linear-gradient(145deg, #0179b5 29%, #0297c1 100%);
+  margin: 5% auto;
+  width: 70%;
+  height: 90%;
   text-align: center;
-  background-color: darkblue;
+}
+
+#home-container #profile-container #profile-container-card h2 {
+  text-align: left;
+  margin: 10% 0 0% 6%;
   color: white;
 }
 
-#hidden {
-  display: none;
+#home-container #profile-container #profile-container-card p {
+  text-align: right;
+  margin: 02% 5% 0 0;
+}
+
+#home-container #profile-container #profile-container-card img {
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border: 0.5px solid #0179b5;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+#home-container #profile-container #profile-container-card #profile-container-social {
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#home-container .nav-container {
+  width: 100%;
+  height: 80%;
+  margin: auto 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  border: 1px none red;
+}
+
+#home-container .nav-container .nav-tooltip, #home-container .nav-container .nav-links {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+  border: 1px none green;
+}
+
+#home-container .nav-container .nav-tooltip .nav-text, #home-container .nav-container .nav-links .nav-text {
+  text-align: left;
+  margin-left: 30%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+#home-container .nav-container .nav-tooltip .nav-text:hover, #home-container .nav-container .nav-links .nav-text:hover {
+  text-decoration: underline;
+}
+
+#home-container .nav-container .nav-tooltip .text-tooltip, #home-container .nav-container .nav-links .text-tooltip {
+  text-align: right;
+  margin-right: 10%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media only screen and (orientation: landscape) {
+  #home-container {
+    -ms-grid-columns: 40% 60%;
+        grid-template-columns: 40% 60%;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    background-position-x: 0;
+  }
+  #home-container #profile-container-card {
+    height: 90%;
+  }
+  #home-container .nav-container {
+    height: 50%;
+    width: 90%;
+    margin: auto 5%;
+  }
+}
+
+@media only screen and (min-width: 767px) and (orientation: portrait) {
+  #profile-container-card {
+    height: 90%;
+    width: 55%;
+  }
+  .nav-container {
+    height: 65%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
