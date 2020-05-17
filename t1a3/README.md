@@ -1,6 +1,7 @@
 <!-- ![Portfolio Website]() -->
 # SIMO_SULTAN'S PORTFOLIO WEBSITE
 [https://simosultan.netlify.app](https://simosultan.netlify.app)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9d3a1e78-acb0-4671-8ec4-c68f15a9b234/deploy-status)](https://app.netlify.com/sites/simosultan/deploys)
 
 ![GitHub followers](https://img.shields.io/github/followers/SimoSultan?style=social)
 ![Twitter Follow](https://img.shields.io/twitter/follow/simo_sultan?style=social)
