@@ -1,6 +1,7 @@
 
 @import './partials/variable';
 @import './partials/mixins';
+@import './partials/animations';
 @import './partials/fonts';
 @import './partials/about';
 @import './partials/blogs';
@@ -22,6 +23,7 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
   letter-spacing: 1.5px;
+  cursor: default;
 }
 
 p {
@@ -76,7 +78,7 @@ footer {
 
 // MOBILE PORTRAIT 
 
-#home-container {
+.page-container {
   grid-template-rows: 2fr 1fr;
   background-image: $bkgd-img;
   background-repeat: no-repeat;
@@ -98,7 +100,15 @@ footer {
       -moz-box-shadow: 0px 0px 40px 15px rgba(0, 89, 145, 0.8);
       box-shadow: 0px 0px 40px 15px rgba(0, 89, 145, 0.8);
       box-shadow: 0px 0px 40px 15px rgba(0, 89, 145, 0.8);
-      // box-shadow: 0px 0px 40px 15px rgba(0, 0, 0, 0.3)
+      animation-name: fadeCardShadowOut;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      &:hover {
+        animation-name: fadeCardShadowIn;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+      }
+
 
       background: rgb(1,121,181);
       background: linear-gradient(145deg, rgba(1,121,181,1) 29%, rgba(2,151,193,1) 100%);
@@ -124,17 +134,20 @@ footer {
         align-self: center;
         border: 0.5px solid rgb(1,121,181);
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+        animation-name: fadeImgShadowOut;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        &:hover {
+          animation-name: fadeImgShadowIn;
+          animation-duration: 0.5s;
+          animation-fill-mode: forwards;
+        }
       }
       .profile-container-social {
         grid-row-start: 3;
-        display: grid;
+        // display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         align-self: center;
-        // .social-link {
-        //   &:hover svg {
-        //     text-decoration: underline;
-        //   }
-        // }
       }
     }
   }
@@ -143,31 +156,31 @@ footer {
     width: 100%;
     height: 80%;
     margin: auto 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 30% 70%;
     grid-row-start: 2;
     grid-column-start: 1;
     @include debugBorder($debug, $debugRed);
     .nav-tooltip, .nav-links {
-      display: grid;
       grid-template-rows: 1fr 1fr 1fr 1fr;
       @include debugBorder($debug, $debugGreen);
       .nav-text {
-        text-align: left;
-        margin-left: 30%;
+        text-align: right;
+        margin-right: 12%;
         align-self: center;
         color: $font-light-color;
         letter-spacing: 2px;
-        font-size: 20px;
+        font-size: 1rem;
         cursor: pointer;
-        &:hover{
-          text-decoration: underline;
-        }
+      }
+      .nav-links-tooltip {
+        opacity: 0%;
+        display: none;
       }
       .text-tooltip {
         text-align: right;
         margin-right: 10%;
         align-self: center;
+        display: none;
       }
     }
   
@@ -176,7 +189,7 @@ footer {
 
 
 @media screen and (min-height: 640px) and (orientation: portrait)  {
-  #home-container {
+  .page-container {
     .profile-container {
       height: 90%;
       min-width: 356px;
@@ -185,7 +198,7 @@ footer {
 }
 
 @media screen and (min-height: 800px) and (orientation: portrait)  {
-  #home-container {
+  .page-container {
     .profile-container {
       height: 80%;
     }
@@ -197,7 +210,7 @@ footer {
 
 
 @media screen and (min-width: 568px) and (orientation: landscape)  {
-  #home-container {
+  .page-container {
     grid-template-columns: 40% 60%;
     grid-template-rows: 1fr;
     background-position-x: 0;
@@ -241,7 +254,7 @@ footer {
 
 @media screen and (min-width: 800px) and (orientation: landscape)  {
 
-  #home-container {
+  .page-container {
     .profile-container {
       height: 85%;
       max-width: 345px;
@@ -259,7 +272,7 @@ footer {
 
 @media screen and (min-width: 768px) and (orientation: portrait) {
 
-  #home-container {
+  .page-container {
     background-position-x: 0;
 
     .profile-container {
@@ -285,7 +298,7 @@ footer {
 
 @media screen and (min-width: 1024px) and (orientation: landscape) {
 
-  #home-container {
+  .page-container {
     grid-template-columns: 40% 60%;
     grid-template-rows: 1fr;
     background-position-x: 0;
@@ -320,16 +333,16 @@ footer {
   // and (-webkit-min-device-pixel-ratio: 1) 
 { 
   
-  #home-container {
+  .page-container {
     grid-template-columns: 40% 60%;
     grid-template-rows: 1fr;
     background-position-x: 0;
     
     .profile-container {
       grid-column-start: 2;
-      height: 60%;
+      // height: 60%;
       min-height: 430px;
-      max-height: calc(100vh - 650px);
+      max-height: 650px;
       max-width: inherit;
       .profile-container-card {
         height: 100%;
@@ -342,6 +355,16 @@ footer {
         p {
           font-size: 1.3rem;
         }
+        .profile-container-social > * {
+          position: relative;
+        }
+        .profile-container-social > *:before {
+          @include underlineProperties(50%, 5px, 23px)
+        }
+        .profile-container-social > *:hover:before,
+        .profile-container-social > *:focus:before {
+          @include underlineHover()
+        }
       }
       .iconify {
         width: inherit;
@@ -349,25 +372,54 @@ footer {
     }
 
     .nav-container {
+      grid-template-columns: 1fr;
       grid-row-start: 1;
       grid-column-start: 1;
       height: 15%;
       margin: 25% 0;
       .nav-tooltip {
-        // display: none;
-        grid-row-start: 1;
-        grid-column-start: 2;
+        // grid-row-start: 1;
+        // grid-column-start: 2;
         .text-tooltip {
+          display: none;
           text-align: left;
           margin: 0;
+          .active {
+            display: block;
+          }
         }
       }
       .nav-links {
         grid-row-start: 1;
         grid-column-start: 1;
-        // &:hover + .nav-tooltip{
-        //   display: block;
-        // }
+        .nav-text {
+          text-align: left;
+          margin: 10px 0 10px 10%;
+          position: relative;
+          width: max-content;
+        }
+        .nav-links-tooltip {
+          display: block;
+          opacity: 0%;
+          margin-top: 10px;
+          grid-column-start: 2;
+          animation-name: animateRightOut;
+          animation-duration: 0.5s;
+          animation-fill-mode: forwards;
+        }
+        .nav-text:before {
+          @include underlineProperties(100%, -5px, 0)
+        }
+        .nav-text:hover:before,
+        .nav-text:focus:before {
+          @include underlineHover()
+        }
+
+        .nav-text:hover + .nav-links-tooltip {
+          animation-name: animateRightIn;
+          animation-duration: 0.5s;
+          animation-fill-mode: forwards;
+        }
       }
     }
 
@@ -389,3 +441,5 @@ footer {
 //     float: left;
 //   }
 // }
+
+
