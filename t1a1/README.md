@@ -318,18 +318,16 @@ Where:
 
 
   3. **Case Study**  
-  This is the case study
 
-
-<!-- We found company A doesn't adhere to ethical issue B because of actions/evidence C, my recommendation to prevent that from happening again is D.  -->
-
-<!-- You can & should lean on existing sources of info or evidence about an ethical breach rather than just make up your own assumptions of a company's ethical breach. Find articles, news, etc. As an example, most companies release their own blog post if their user data or passwords get stolen - that's a perfect source as it would usually cover why their data was vulnerable & how they're going to prevent theft in future. 
-
-Your case study would be discussing what the ethical breach was in that scenario, how it happened, if the company's recommendations (if they exist) to prevent it in future are valid, and provide your own recommendations to prevent that ethical breach in future as well. -->
-
+    Clearview AI, a US-based controversial facial-recognition software provider from Australian developer Hoan Thon-That and one of the founders of PayPal, raised more concerns in February 20 when they were hit bit a data breach exposing its entire customer list, and details about those customers. It was said that the intruder would be able to see how many searches each customer has made and how many accounts that they set up. A quick overview of Clearview, Clearview rose to notoriety in January 2020 when The New York Times exposed how many law enforcement agencies were using the software in the US. The company was quickly denounced as "disturbing and unethical", with many social media users raising significant concerns about the safety of their data. So a data breach to this company would be sure to put the spotlight on the data privacy debate again [2]. 
+    Alongside social media users, the tech giants of Twitter, Google, Facebook and YouTube have all sent cease and desist letters, pointing out that scraping photographs off of their sites is illegal, or stands in violation of their terms of service. Coming out due to the fact that this is where the majority of Clearview's 3+ billion photos used for the facial recognition have been sourced from. 
+    After the attack, Clearview seem to have handled the situation relatively well, and calming the waters by announcing that the vulnerability had been patched, that there was no compromise of Clearview's systems or network and that the hacker had not managed to obtain the search histories of clients. Also, very recently in May 2020, they have announced they won't be selling their software to any company not directly associated with law enforcement [3].
+    Personally, I can't add any additional recommendations to how they handled the situation. However, part of the reason they are under fire, is of Hoan Thon-That's previous apps were mostly phishing apps. How he is handling the company and the image he portrays leads the general public to have high suspicion. With more transparency and honesty, it would be easier to believe that their intentions are only to help law enforcement (where the software actually has been put to use and been successful). Privacy and security for a company like this must be of utmost concern, so far, it seems that it is, but with suspicion surrounding their company, it's hard to put faith in their announcements. 
 
 ***Resources Used:***  
 [1] [Wired](https://www.wired.com/story/capital-one-paige-thompson-case-hacking-spree/)
+[2] [SmartCompany](https://www.smartcompany.com.au/startupsmart/news/clearview-ai-data-breach/)
+[3] [CPO Magazine](https://www.cpomagazine.com/cyber-security/clearview-ai-data-breach-exposes-facial-recognition-firms-client-list/)
 
 *** 
 
