@@ -1,9 +1,9 @@
 
+@import './partials/fonts';
 @import './partials/variable';
 @import './partials/mixins';
 @import './partials/animations';
 @import './partials/downarrow';
-@import './partials/fonts';
 @import './partials/contact';
 @import './partials/about';
 @import './partials/blogs';
@@ -21,7 +21,7 @@ body {
   overflow: auto;
   height: 100vh;
   width: 100vw;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: $main-font;
   font-weight: 400;
   letter-spacing: 1.5px;
   cursor: default;
@@ -39,18 +39,23 @@ a {
 }
 
 .social-icons { 
-  // color: $icon-dark-color;
   color: $primary-dark-color;
-  // color: $secondary-light-color;
-  // color: $secondary-dark-color;
 }
 
 .social-link {
   font-size: 36px;
   margin-bottom: 15px;
-  // &:nth-child(even) i {
-  //   color: $icon-light-color;
-  // }
+}
+
+.dev-icons {
+  font-size: 3em;
+  margin: 2%;
+  color: $primary-dark-color;
+}
+.dev-icon-text {
+  text-align: center;
+  color: $primary-dark-color;
+  // color: $font-light-color;
 }
 
 .grid {
@@ -81,15 +86,16 @@ footer {
   text-align: right;
   margin-right: 3%;
   margin-bottom: 1%;
-  color: $footer-text-color;
-  // color: $secondary-light-color;
+  // color: $footer-text-color;
+  color: $font-dark-color;
   grid-row-start: 2;
   grid-column-start: 1;
   align-self: flex-end;
   z-index: 5;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
+  font-family: $small-font;
 }
 
 .name-link {
@@ -101,6 +107,7 @@ footer {
 .header {
   color: $font-light-color;
   margin: 3% 0 -3% 4%;
+  height: fit-content;
 }
 
 
@@ -108,6 +115,11 @@ footer {
 // HOME PAGE STYLES 
 
 
+#home-container {
+  height: 100vh;
+  grid-template-rows: 70% 30%;
+  // @include addBackground();
+}
 
 
 // MOBILE PORTRAIT 
@@ -136,26 +148,33 @@ footer {
         animation: fadeCardShadowIn 0.5s forwards;
       }
 
-
       background: $card-bkgd-color;
       background: $card-linear-gradient;
 
       // margin: 10% auto;
       margin: auto;
-      width: 70%;
+      width: 75%;
       max-width: 325px;
       height: 100%;
       text-align: center;
-      h2 {
-        text-align: left;
-        margin: 7% 0 0% 6%;
-        color: $font-light-color;
+
+      .profile-container-card-header {
+        grid-row-start: 1;
+        font-family: $header-font;
+        h2 {
+          text-align: left;
+          margin: 7% 0 0% 6%;
+          color: $font-light-color;
+          font-family: $header-font;
+        }
+        #home-profile-container-card-header-subtext {
+          text-align: right;
+          margin: 02% 5% 0 0;
+          color: $font-dark-color;
+          font-family: $small-font;
+        }
       }
-      p {
-        text-align: right;
-        margin: 02% 5% 0 0;
-        color: $font-dark-color;
-      }
+
       img {
         grid-row-start: 2;
         justify-self: center;
@@ -179,7 +198,7 @@ footer {
 
   .nav-container {
     width: 100%;
-    height: 80%;
+    height: 100%;
     margin: auto 0;
     grid-template-columns: 30% 70%;
     grid-row-start: 2;
@@ -191,24 +210,29 @@ footer {
       @include debugBorder($debug, $debugGreen);
 
       #downArrow-tooltip {
-        writing-mode: vertical-lr;
-        text-orientation: mixed;
         letter-spacing: 6px;
-        margin-left: 32%;
         margin-top: 0;
-        // margin-top: -10px;
-        font-size: small;
         color: $font-dark-color;
+        transform: rotate(270deg);
+        width: max-content;
+        display: flex;
+        position: relative;
+        top: 26%;
+        right: 35%;
+        font-family: $small-font;
+        font-size: 1.1rem;
       }
 
       .nav-text {
         text-align: right;
-        margin-right: 12%;
+        padding-right: 12%;
         align-self: center;
         color: $font-light-color;
         letter-spacing: 2px;
         font-size: 1rem;
         cursor: pointer;
+        height: 100%;
+        font-family: $nav-font;
       }
       .nav-links-tooltip {
         opacity: 0%;
@@ -223,12 +247,81 @@ footer {
       }
     }
   }
-
-  .below-about-page {
-    height: 100vh;
-  }
 }
 
+
+
+
+
+// ABOUT PAGE STYLES
+
+
+
+#about-container {
+  .header {
+    grid-row-start: 1;
+    margin: unset;
+    margin-left: 4%;
+    z-index: 2;
+  }
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 8% 1fr 1fr;
+  #about-skills-container {
+    grid-row-start: 2;
+    .profile-container-card {
+      width: 80%;
+      height: unset;
+      grid-template-rows: unset;
+      padding: 2%;
+      // height: max-content;
+      .about-profile-container-card-header {
+        h2 {
+          font-size: 1em;
+          margin: 3% 0 3% 3%;
+        }
+      }
+      .about-profile-container-card-icons {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        .dev-icon-text-container {
+          margin-top: 2%;
+          
+          .dev-icon-text {
+            font-family: $small-font;
+            color: lightgrey;
+            margin-top: 5%;
+          }
+        }
+      }
+    }
+  }
+  #about-me-text {
+    grid-row-start: 3;
+    grid-template-rows: 20% 1fr;
+    #about-me-text-content {
+      text-align: justify;
+      padding: 0 9%;
+      color: lightgrey;
+      font-family: $small-font;
+      font-weight: 400;
+      line-height: 1.3em;
+
+    }
+    // .footer-copyright {
+    //   color: $font-dark-color;
+    // }
+  }
+
+
+}
+
+
+
+
+
+
+
+// MEDIA QUERIES
 
 
 

@@ -533,7 +533,7 @@ My code that demonstrates this flow can be found [here](https://github.com/SimoS
 
 ## Q15:
 
-My Ruby code that solves the problem can be found [here](https://github.com/SimoSultan/ca-classwork/blob/master/assignments/t1a1/docs/q15_code.rb).
+My Ruby code that solves the problem can be found [here](https://github.com/SimoSultan/ca-assignments/blob/master/t1a1/docs/q15_code.rb).
 
 
 ***
@@ -541,7 +541,7 @@ My Ruby code that solves the problem can be found [here](https://github.com/Simo
 
 ## Q16:
 
-My Ruby program that solves the problem can be found [here](https://github.com/SimoSultan/ca-assignments/blob/master/t1a1/docs/q16_tests.rb). Additionally, I have used 'test/unit' gem to test the code. Which is found [here](). 
+My Ruby program that solves the problem can be found [here](https://github.com/SimoSultan/ca-assignments/blob/master/t1a1/docs/q16_code.rb). Additionally, I have used 'test/unit' gem to test the code. Which is found [here](https://github.com/SimoSultan/ca-assignments/blob/master/t1a1/docs/q16_tests.rb). 
 
 ***
 

@@ -1,81 +1,34 @@
 
-// function pressMainButton() {
-//   if ($("#hidden").is(":visible")) {
-//     $("#hidden").hide()
-
-//   } else {
-//     $("#hidden").show()
-//   }
-  
+// function linkToPage(page) {
+//   window.location.href = page;
 // };
-
-
-function linkToPage(page) {
-  window.location.href = page;
-};
-
-// function test() {
-//   let tooltipHover;
-//   tooltipHover = "."+$(this).attr("class")+"-tip";
-//   // console.log(tooltipHover);
-//   // console.log(this);
-//   console.log( 'hovering on' , $(this).attr('id') );
-//   console.log(this.$.attr);
-//   // $(
-//   //   $(".nav-links .nav-text").hover(function() {
-//   //     tooltipHover = "."+$(this).attr("class")+"-tip";
-//   //     console.log(tooltipHover);
-      
-//   //     $(tooltipHover).addClass("active")
-//   //   }, function() {
-//   //     $(tooltipHover).removeClass("active");
-//   //   })
-//   // )
-
-
-// }
-
-// $('nav').hover(function() {
-//   // alert(this.class);
-//   console.log("hello");
-//   // console.log($(this));
-  
-// });
-// $('nav').mouseover(function() {
-//   console.log("hello");
-  
-//   console.log($(this));
-//   // function(){ $(this).addClass('hover') },
-//   // function(){ $(this).removeClass('hover') }
-// });
-
-
-// $("nav").on({
-//   mouseenter: function () {
-//     console.log("hello");
-    
-//     //  $(this).addClass("hover");
-//   },
-//   mouseleave:function () {
-//     console.log("bye");
-//     // $(this).removeClass("hover");
-//   }
-// });
-
-// $(".nav-links").hover(
-//   function () {
-//     console.log("hello");
-    
-//     // $(this).append($("<span> ***</span>"));
-//   }, 
-//   function () {
-//     console.log("bye");
-//     // $(this).find("span:last").remove();
-//   }
-// );
 
 
 $(window).scroll(function(){
   $(".arrow").css("opacity", 1 - $(window).scrollTop() / 250); 
+  $("#home-container > *").css("opacity", 1 - $(window).scrollTop() / 600); 
+  $("#about-container > *").css("opacity", 0 + $(window).scrollTop() / 600); 
+
 //250 is fade pixels
 });
+
+function scrollToAbout() {
+  $('#scroll-to-about').on('click', function(e) {
+    e.preventDefault();
+    $ ('html, body').animate({ scrollTop: $('#about-container').offset().top}, 700, 'swing');
+    // $("#home-container > *").animate({opacity: 0}, 600);
+    // $("#about-container > *").animate({opacity: 1}, 600)
+  });
+}
+
+// function goToTopPage() {
+//   $('#scroll-to-top').on('click', function(e) {
+//   // $('#scroll-to-top').on('click', function() {
+//     e.preventDefault();
+//     $ ('html, body').animate({ scrollTop: 0}, 500, 'linear');
+//     $("#about-container > *").animate({opacity: 0}, 600);
+//     $("#home-container > *").animate({opacity: 1}, 600)
+//   });
+// }
+
+
