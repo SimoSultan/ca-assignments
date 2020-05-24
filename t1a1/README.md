@@ -496,7 +496,7 @@ The reason this code was not working correctly was due to the assigning the arr[
 x = arr[i]
 y = arr[i+1]
 arr[i] = y
-arr[i+1] = x
+arr[i+1] = 
 ```
 An additional method has been supplied in my code provided above that sorts the entire array using recursion.
 
