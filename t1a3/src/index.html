@@ -3,37 +3,35 @@
 <head>
   <title>Simon M Curran</title>
   <meta charset="UTF-8">
-  <!-- <meta http-equiv="Refresh" content="0"; url="https://www.simonmcurran.com/" /> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.css">
-  <!-- ADD INTEGRITY TO STYLESHEET BEFORE SUBMITTAL -->
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css" integrity="sha512-0AI2CXRwKzAyl3SNF06NA6TuPMOMlCVu0bY6BtygYAaUSK9VaA+oNkyKKb2bQeCTa6KDpHpucpoiHaqlwCvXZw==">
 
-  <!-- JS & jQuery -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-  <script src="js/app.js"></script>
+  <!-- JS -->
+  <script src="js/app.js" integrity="sha512-FGV8dqieudJ0c5stCSq9KnvTvVZyPbfhnlLMt80Ho6ff6EK7rl7RKCWkYadlIpulVy26t2+Kz8pd+uYmnLgHFA=="></script>
 
   <!-- SCROLLBAR -->
-  <link rel="stylesheet" media="screen and (min-width: 1200px)" href="css/scrollbar.css">
-  <script src="js/scrollbar.min.js"></script>
+  <link rel="stylesheet" media="screen and (min-width: 1200px)" href="css/scrollbar.css" integrity="sha512-aVA0mzyls0CVY+OBAHrgB6paT5paPuTrUU07DzzZOAz5FQ33NWWqIIMPuNXb22fUBdWOOBb6o1Ub0D4EjGM6yg==">
+  <script src="js/scrollbar.min.js" integrity="sha512-b1QgVAtEcH7iSgvRNRhVJ2rSqfNIU5+//+ChrmVNqGJUso477TnQFZgWcrC9nAhfBQTb92Y9GCC4OtmENqvA6w=="></script>
   
   <!-- FAVICON -->
-  <link rel="shortcut icon" href="./img/favicon/favicon-32x32.png" type="image/x-icon"/>
+  <link rel="shortcut icon" href="./img/favicon/favicon-32x32.png" type="image/x-icon"/ integrity="sha512-QyXqnavbjskwkuBoKWBunLLkLdAO/T6tcQpQN/x8jVirEWjRUP5e2O/awS9yIMy6pAlW7CG4NlWhV5+aQrQfng==">
+  
   <!-- SOCIAL ICONS -->
-  <script src="https://kit.fontawesome.com/7f09184100.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/7f09184100.js" integrity="sha512-M1Gz2S0gXudxbPUUGonCTObYg3Dgfwv+7e/H3i3o8KowERzyy919huPCgvtUAyWhRqYl/aT5+sxqVIuu32Coow==" crossorigin="anonymous"></script>
+
   <!-- DEV ICONS -->
-  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-  <!-- MATERIAL ICONS -->
-  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+  <link href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css" rel="stylesheet" integrity="sha512-aSo1Rf6PPUdCC6zmMOiJxjAYtFnHkpsebCfnzYIxN0FjQdwpI2N/S5cMy1XnDVqTsi5LJ2YvkUcIVHvs1f994A==" crossorigin="anonymous">
+
 </head>
 <body ss-container>
-<!-- <body> -->
 
   <div id="home-about-container" class="home-about-container page-container" >
 
     
-    <img class="background" src="./img/bkgds/bkgd-cable.jpg" alt="">
+    <img class="background" src="./img/bkgds/bkgd-cable.jpg" aria-hidden="true">
     <div id="home-container" class="grid body-container">
-    <!-- <div id="home-container" class="body-container"> -->
 
       <section id="home-profile-container-profile" class="profile-container">
         <div id="home-profile-container-card" class="grid profile-container-card">
@@ -42,7 +40,7 @@
             <p id="home-profile-container-card-header-subtext">full stack web dev: loading...</p>
           </div>
           <div id="home-profile-image-container">
-            <img src="./img/profile-img-square.jpg" alt="" class="circle-img card-profile-img">
+            <img src="./img/profile-img-square.jpg" alt="Simon Curran profile image" class="circle-img card-profile-img">
           </div>
           <div id="home-profile-container-social" class="grid profile-container-social">
             <a target="_blank" class="social-link" href="https://twitter.com/simo_sultan"><i class="icons social-icons fab fa-twitter"></i></a>
@@ -57,7 +55,7 @@
       <section class="nav-container grid">
         <div id="scroll-to-about" onclick="scrollToAbout()" class="nav-tooltip">
           <!-- <p id="downArrow-tooltip">find out more</p> -->
-          <div class="arrow bounce"><i class="fa fa-chevron-down fa-2x" aria-hidden="true"></i></div>
+          <div class="arrow bounce"><i id="downArrow" class="fa fa-chevron-down fa-2x" aria-hidden="true"></i></div>
         </div>
         <nav class="nav-links grid">
           <a class="nav-text" href="work.html">STUFF I'VE MADE</a>
@@ -67,7 +65,7 @@
           <a class="nav-text" href="contact.html">MSG ME STUFF</a>
           <div class="nav-links-tooltip">and ask a question</div>
         </nav>
-        <div class="footer-copyright">© Simon Curran</div>
+        <div class="footer-copyright">© 2020 Simon Curran</div>
       </section>
   
   
@@ -160,22 +158,28 @@
         </div>
 
         <div id="about-me-text-content">
-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
-          in reprehenderit in voluptate velit esse cillum dolore eu 
-          fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-          non proident, sunt in culpa qui officia deserunt mollit 
-          anim id est laborum.
+          <p>
+            In early 2018, I started building a web app for my business that allowed
+            clients to book online. It was then that I found my absolute passion in life.
+          </p>
+          <br>
+          <p>Originally a Civil/Structural Engineer, a Driver Trainer and a Business Owner.
+            I am now pursuing my dream of becoming a programmer. At university, I still remember
+            seeing a friend write a script that connected one program to another, I was
+            bamboozled at how he did that! Still to this day I am amazed. But now, 
+            now I have the skills to make one myself. That feels like I have been 
+            living in a cardboard box for my entire life, and now I just stepped outside 
+            and can see the endless possibilities in the world.</p>
+          <br>
+          <p>THAT, is why I love being a programmer.</p>
+          
         </div>
 
         <div id="scroll-to-top" class="bounceReverse" onclick="scrollToTop()">
           <i id="upArrow" class="fas fa-chevron-up fa-2x"></i>
         </div>
 
-        <div class="footer-copyright">© Simon Curran</div>
+        <div class="footer-copyright">© 2020 Simon Curran</div>
 
       </section>
 
