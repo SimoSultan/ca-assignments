@@ -4,79 +4,64 @@
 ![Twitter Follow](https://img.shields.io/twitter/follow/simo_sultan?style=social)
 
 #### Navigation:
-- [**Q1**](#Q1) - 
-- [**Q2**](#Q2) - 
-- [**Q3**](#Q3) -
-- [**Q4**](#Q4) -
-- [**Q5**](#Q5) - 
-- [**Q6**](#Q6) - 
-- [**Q7**](#Q7) - 
-- [**Q8**](#Q8) - 
-- [**Q9**](#Q9) - 
-- [**Q10**](#Q10) - 
-- [**Q11**](#Q11) - 
-- [**Q12**](#Q12) - 
-- [**Q13**](#Q13) - 
-- [**Q14**](#Q14) - 
+- [**Q1**](#Q1) - Rails Architecture
+- [**Q2**](#Q2) - Pros and Cons of a PostgreSQL Database
+- [**Q3**](#Q3) - Agile Methodology
+- [**Q4**](#Q4) - Source Control Workflow
+- [**Q5**](#Q5) - Software Testing Processes
+- [**Q6**](#Q6) - Information System Security
+- [**Q7**](#Q7) - Protecting Information and Data
+- [**Q8**](#Q8) - Legal Obligations Handling User Data
+- [**Q9**](#Q9) - Structural Aspects of a Relational Database
+- [**Q10**](#Q10) - Integrity Aspects of a Relational Database
+- [**Q11**](#Q11) - Manipulative Aspects of a Relational Database
+- [**Q12**](#Q12) - Sorting Algorithms (Big-O)
+- [**Q13**](#Q13) - Search Algorithms (Big-O)
+- [**Q14**](#Q14) - Marketplace Website Research
 
 
 ***
 
 ## Q1:
-<!-- Describe the architecture of a typical Rails application	200-300
- -->
-Model-View-Controller Pattern
-Ruby on Rails uses the Model-View-Controller (MVC) architectural pattern in order to improve the maintainability of the application. The Model centralizes the business logic, the View manages the display logic, while the Controller deals with the application flow. The MVC allows a clean separation of concerns, in the way that it keeps the business logic separated from HTML views. Additionally, it improves decoupling and testing.
 
-Model
+The overall architecture of a Ruby on Rails application has the following features:
 
-The Model layer carries the business logic of the application and the rules to manipulate the data. In Ruby on Rails, the models are used to manage the interaction with their corresponding elements in the database. The Models represent the information in the database and do the appropriate validations.
+- Model-View-Controller architecture.
+- Representational State Transfer (REST) for web services.
+- Support for major databases.
+- Convention over configuration.
 
-View
+These features are discussed in further detail below.
 
-The view is the front-end of the application, representing the user interface. In Ruby on Rails, views are HTML files with embedded Ruby code. The embedded Ruby code in the HTMLs is fairly simple (loops and conditionals). It is only used to display data to the user in the form of views. Views are used to provide the data to the browsers that requested the web pages. Views can server content in several formats, such as HTML, PDF, XML, RSS and more.
+### **Model-View-Controller Architecture**
 
-RESTful Architecture
+- **Model**  
+The Model represents the information in the database and handles the business logic of the application, where it manipulates and validates the data. Then passing that information back to the controller, which in turn sends it to the view. Some of the major database that are used: (MySQL, Oracle, MS SQL Server, PostgreSQL, IBM DB2, and more)
 
-REST stands for Representational State Transfer. REST is an alternative to web services, such as SOAP and WSDL. It relies in the HTTP protocol for all the CRUD operations: create, read, update and delete. RESTful web services are appropriated when the web services are completely stateless, limited bandwidth (it’s very useful for mobile devices since it doesn’t the the overhead of other protocols like SOAP), when the data is not generated dynamically so it could be cached to improve performance and when there is a mutual understanding between the service producer and the consumer.
+- **View**  
+The View is the front-end of the application, AKA the user interface (UI), AKA the webpage that the user 'views'. These are HTML files with Ruby code embedded in them (ERB). Generally, this Ruby code is fairly simple, and it accesses the variables that are in the corresponding Controller Action, which was passed from the Model/Database.
 
-Controller
+- **Controller**  
+Controllers are the middle-person between the Model and View. It receives requests from the View/browser, processes it, then asks the Model for the corresponding data, which then returns it back to the View/user. The Controller should always/ideally be kept as lightweight of code as possible, because the majority of the logic should be handled by the Model.
 
-Controllers interact with models and views. The incoming requests from the browsers are processed by the controllers, which process the data from the models and pass it to the views for presentation.
 
- Ruby on Rails architecture has the following features:
+### **RESTful Architecture**
 
-Model-View-Controller architecture.
-Representational State Transfer (REST) for web services.
-Supports the major databases (MySQL, Oracle, MS SQL Server, PostgreSQL, IBM DB2, and more).
-Open-source server side scripting language.
-Convention over configuration
-Scripts generators to automate tasks.
-Use of YAML machine, which is a human-readable data serialization format.
-The above-described features are distributed in the following Rails’ components and the Fig. 2 shows the interaction between some of these components:
+Representational State Transfer (REST) relies on the HTTP protocol for all the CRUD operations: 'Create', 'Read', 'Update' and 'Delete'. These operations are placed in the 'routes.rb' file, and are the main way that computers talk to each other over the internet.
 
-Action Mailer
-Action Pack
-Action Controller
-Action Dispatcher
-Action View
-Active Model
-Active Record
-Active Resource
-Active Support
-Railties
 
-Since Rails is built on the Ruby language it inherits the goodness and weakness of that language. Ruby is a dynamic scripting language with an elegant syntax and fully object-oriented. Because it is an interpreted language it is slower than other languages that are compiled like Java or C++. In most cases, this difference in speed is not a problem but when the web application needs to scale to millions of concurrent users this performance starts to degrade. The Ruby language is not suited for high concurrency applications, because it is not optimized for speed computing. It was designed to be elegant, simply and for rapid development. Ruby doesn’t have good thread support yet and, like many other scripting languages, Ruby has trouble dealing with long-lived processes. But other languages, like Java, are really good at that because they have been optimized for year to handle threads efficiently. Another weakness is the Ruby’s garbage collector is not as good as Java’s in that each process requires much more memory. In terms of deployment, a web application on Ruby on Rails could be harder to deploy than sites that are using more common technologies, such as PHP. That’s because not all the hosting providers support Rails, but in time the support of Rails is increasing.
+The interaction between these components can be seen below in the figure.
 
 ![Overall Framework Architecture](./img/rails_arch.png)
-Reference model depicting the overall framework architecture 
-***note: original source of image on webpage has a broken link***
+Reference model depicting the overall framework architecture.  
+***Note: original source of image cannot be found due to a broken link on referenced webpage.***
+
+
+### **Convention Over Configuration**
+Rails has been built with convention in mind. This concept was introduced by David Heinemeier Hansson (creator of Ruby on Rails), as it decreases the number of decisions a developer is required to make, without losing flexibility. For a very small example, when naming controllers (plural) vs model (singular). 
 
 ***Resources Used:***  
 [1] [Adrien Mejia ](https://adrianmejia.com/ruby-on-rails-architectural-design/#:~:text=Model%2DView%2DController%20Pattern,deals%20with%20the%20application%20flow.)  
-<!-- BLATANT COPYING HERE -->
-
-<!-- checkout links below for more info -->
 [2] [Sitepoint](https://www.sitepoint.com/model-view-controller-mvc-architecture-rails/)  
 [3] [Medium](https://medium.com/the-renaissance-developer/ruby-on-rails-http-mvc-and-routes-f02215a46a84)  
 
@@ -86,50 +71,140 @@ Reference model depicting the overall framework architecture
 
 
 ## Q2:
-<!-- Identify a database commonly used in web applications (including Rails) and discuss the pros and cons of this database	150-250 -->
 
+PostgreSQL (initially called Postgres) was created by a computer science professor Michael Stonebraker and his team, and became one of the most popular open-source databases, here's why.
 
+**Pros**
+- Integration with most programming language like Java, C, C++, etc.
+- Cross platform (supports 34 platforms of Unix and Windows compatibility is available via the Cygwin framework)
+- Troubleshooting is simpler due to the amount of resources available.
+- Highly regarded as reliable and stable.
+- Large community base.
+- Easy to use.
+- Data types are user defined.
+- Open source (can customise in any way with minimal effort and no attached costs).
+- Make use of Stored procedures.
+- Immunity to over-deployment (as there is no associated licensing cost for the software)
+- Designed for high volume environments (using a multiple row data storage strategy called MVCC)
+- Many high quality GUI Tools
+- Supports geographic objects so it can be used as a geospatial data store for location-based services and geographic information systems
+- Low maintenance administration
+- Run dynamic websites and web apps as a LAMP stack option
+
+**Cons**
+- Considerably slower than other popular databases/MySQL (focuses on compatibility over speed).
+- Does not support the entire ANSI SQL 92' standard.
+- Difficult installation for beginners.
+
+As can be seen, the amount of advantages significantly outweighs its disadvantages, making this database a highly popular model to use.
 
 ***Resources Used:***  
-[1] [HowStuffWorks](https://computer.howstuffworks.com/internet/basics/what-is-an-ip-address.htm)  
-[2] [MakeUseOf](https://www.makeuseof.com/tag/technology-explained-how-does-a-router-work/)  
-[3] [Cloudfare](https://www.cloudflare.com/learning/dns/what-is-dns/)
+[1] [EDUCBA](https://www.educba.com/what-is-postgresql/)   
+[2] [Quora](https://www.quora.com/What-are-the-advantages-and-disadvantages-of-PostgreSQL)  
+[3] [Guru99](https://www.guru99.com/introduction-postgresql.html)
+
 ***
 
 
-
 ## Q3:
-<!-- Discuss the implementation of Agile project management methodology	200-300 -->
+
+In 2001, a group of 17 individuals created the **Agile Manifesto**, that outlines their beliefs on how software projects should be run.
+
+The baseline of *'Agile'* is more a philosophy than a methodology. It is all about moving fast and releasing incremental, feedback-driven changes from needs of the users, more often. It has been ever growing and used instead of the more traditional *'Waterfall method'*. Where that idea is to spend several months or years on a project without ever showing it to the user.
+
+As part of the Agile Manifesto, the creators defined 4 key values that all projects should adhere to:
+
+> - Individuals and interactions over processes and tools
+> - Working software over comprehensive documentation
+> - Customer collaboration over contract negotiation
+> - Responding to change over following a plan 
+
+They then presented these values in a more actionable method, seen in this list of 12 guiding principles: [2]
+
+- The highest priority is to satisfy the customer through early and continuous delivery
+- Welcome changing requirements, even late in development
+- Deliver working software frequently, from a couple of weeks to a couple of months
+- Stakeholders and developers must collaborate on a daily basis
+- Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done.
+- Face-to-face meetings are deemed the most efficient and effective format for project success
+- A final working product is the ultimate measure of progress
+- Agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely.
+- Continuous attention to technical excellence and good design enhances agility
+- Simplicity—maximizing the work not done—is an essential element
+- The best architectures, requirements, and designs emerge from self-organizing teams
+- At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly
+- If you think of software development today, these principles, and Agile in general, can be seen as a response to sky-high user expectations. 
+
+The key part of Agile is taking the time to understand what works and what doesn't with the team. This should be done at the end of every sprint and upon completion of the project.
+Summing up Agile is best used by the word **'iterative'**.  [1]
 
 
 ***Resources Used:***  
-[1] [SearchNetworking](https://searchnetworking.techtarget.com/definition/packet)  
-[2] [GlobalSign](https://www.globalsign.com/en/blog/the-difference-between-http-and-https)  
-[3] [Khan Academy](https://www.khanacademy.org/computing/ap-computer-science-principles/the-internet/http-html/a/hypertext-transfer-protocol-http)
+[1] [Planio](https://plan.io/blog/ultimate-guide-to-implementing-agile-project-management-and-scrum/)  
+[2] [Agile Manifesto](https://agilemanifesto.org/principles.html)  
+
+
 
 *** 
 
 
 ## Q4:
-<!-- Provide an overview and description of a standard source control workflow -->
 
-***Resources Used:*** [Quora](https://www.quora.com/What-are-some-real-world-applications-of-a-queue-data-structure-1)
+Linus Torvalds first released Git in 2005, and was created to be a better source control manager than what was available at the time. 
+Git is both free and open source, designed to be optimised for speed and efficiency, all whilst being lightweight, making it pretty much the standard of version control in industry. Companies integrate Git into their workflow to accomplish tasks in a consistent and productive manner. According to Atlassian [1] there are 4 types of workflows that companies can leverage. 
+- Centralised
+- Feature Branch
+- Gitflow
+- Forking
 
+Here we will be looking at the Feature Branch workflow a little closer. Unlike the Centralized workflow, where there are no branches and work is commited by the team into the 'master' branch, all feature development takes place on branches in this workflow. If a company implements a continuous integration environment, this workflow is highly advantageous as features can be developed, and when working, integrated straight into the 'master'. Meaning, the 'master' will never contain any broken code as the main codebase is never disturbed. Using these feature branches allows developers to utilise 'Pull Requests' which provides a medium through the company to ask for help and suggestions, receive feedback on their code and have their code signed off on before it is integrated into the 'master' branch. This workflow can even be incorporated into the Gitflow, and Git Forking workflows, which actually uses the Feature Branch workflow in regards to their branching models.
 
+#### Additionally
+Below I have provided a great infograph from [Tower](https://www.git-tower.com/learn/cheat-sheets/vcs-workflow) on the type of commands that are so commonly used in a Git Workflow. It is a long/large picture, but a great one that I wished to include for extra information. 
+
+***Resources Used:***  
+[1] [Atlassian](https://www.atlassian.com/git/tutorials/comparing-workflows)  
+![Git Workflow Flowchart](img/workflow-of-version-control.png)
+Image Reference: [Tower](https://www.git-tower.com/learn/cheat-sheets/vcs-workflow)
 
 ***
 
 
-## Q5: 
-<!-- Provide an overview and description of a standard software testing process (e.g. manual testing)	100-200 -->
-#### 1. 
+## Q5:
+
+> *"The goal of testing software is not to find bugs or to make software better. It’s to reduce risk by proactively finding and eliminating problems which would most greatly impact the customer using the software."* [1]
+
+We do this by identifying which sections of the software are most likely to have the biggest risk of causing this impact, and determining an array of tests to ensure the functionality is working correctly and as intended. 
+
+If the test results in an error, the bug is logged and ranked on severity. Most of these bugs will be fixed, but if they have a low impact, they might be noted and remain in the system with a solution in the FAQs. 
+
+The 2 most popular ways to test software come down to manual vs automated. To talk a little about manual testing.
+
+**Here are some types of manual testing:** [2]
+![Types of Manual Testing](img/typesofmanualtesting.png)  
+
+Manual testing is where Testers manually run different use cases of the software to find bugs. Automated tests can be then created after first running these manual tests. 
+Below is an outline on the process of running manual tests.
+
+How to perform Manual Testing
+- Read the software documentation plan.
+- Determine Test cases that cover the requirements in the docs.
+- Review test cases with the team lead and client.
+- Run the tests.
+- Log any bugs.
+- After bugs are fixed, run the failing test cases to validate.
+
+The key concept is for the software to be as error free as possible and conforms with the requirements. 
+
+To leave you with a few interesting facts.
+> - *Testing requires many skill sets and cannot be done by 'anyone'.*
+> - *Manual testing is always important in combination with automated testing, as 100% test automation is impossible.*
 
 
 ***Resources Used:***  
-[1] [Guru99](https://www.guru99.com/difference-compiler-vs-interpreter.html)    
-[2] [Programiz](https://www.programiz.com/article/difference-compiler-interpreter)  
-[3] [Webopedia](https://www.techopedia.com/definition/7793/interpreter)  
-[4] [StackExchange](https://softwareengineering.stackexchange.com/questions/118586/how-does-a-compiler-work).
+[1] [usersnap](https://usersnap.com/blog/software-testing-basics/)  
+[2] [Guru99](https://www.guru99.com/manual-testing.html)
+
 
 
 ***
@@ -137,61 +212,212 @@ Reference model depicting the overall framework architecture
 
 
 ## Q6:
-<!-- Discuss and analyse requirements related to information system security and how they relate to the project 100-200 -->
 
-### 1.
+Cyberthreats are increasing at an exponential rate in the tech industry, and the bodyguard to protect against these are the Information System Securities that companies (need to) put in place. Because these threats could (and do!) endanger businesses. [2]
+
+There are several different security precautions that companies and individuals can take to improve security and secure their personal computing environment respectively. The fundamentals behind these precautions can be described in terms of three major requirements, and they are: [1]
+
+**Confidentiality**, **Integrity**, **Availability** (CIA) - which make up *'The Information Security Triad'* [3]
+
+![The Information Security Triad](img/Security-Triad.png)
+
+### **Confidentiality:**
+The underlying essence of confidentiality comes from the protection of information. Meaning, we need to be able to restrict access to only those who are allowed to see it.  
+*E.g. (no prying eyes / hackers allowed here)*   
+
+### **Integrity:**
+The integrity of information is about ensuring that the information being accessed is of true intention. Meaning that information has not been altered in any way to mis-represent its contents.   
+*E.g. This can be in the form of a hacker changing the contents of a file, or when there may be a power surge that accidentally deletes or corrupts a file/information.*
+
+### **Availability:**
+
+The availability of the information means that it can be accessed and modified in an appropriate time frame by any authorized person to do so. This does not necessarily mean that the information is accessible immediately in every scenario. As it depends on the situation as to when the information needs to be available.  
+*E.g. Stock traders need the information to be immediately available, but a business owner might be happy to have the sales of the previous day available the next morning.*  [3]
+
+A little extra on the types of measures to mitigate security threats.
+
+> *One might think that simply using a user ID and password is a secure method of authentication. But using a single-factor of authentication is extremely easy to compromise.*
+
+Here are some measures that both companies and individuals can take for better information security. Some of these will be discussed in the next question.
+- Authentication (2-factor)
+- Access Control
+- Encryption
+- Backups
+- Firewalls
+- Virtual Private Networks
+- Physical Security
+- Security Policies
 
 
 ***Resources Used:***  
-[1] [freeCodeCamp](https://www.freecodecamp.org/news/the-advantages-and-disadvantages-of-javascript/)  
-[2] [TechVidian](https://techvidvan.com/tutorials/python-advantages-and-disadvantages/)
+[1] [National Academies Press](https://www.nap.edu/read/1581/chapter/4)   
+[2] [ProServeIt](https://www.proserveit.com/blog/information-security-requirements)  
+[3] [PressBooks](https://bus206.pressbooks.com/chapter/chapter-6-information-systems-security/)
+
 
 
 *** 
 
 
 ## Q7:
-<!-- Discuss common methods of protecting information and data and how you would apply them to the project 100-200 -->
+
+<!-- Following on from the previous question about measures a company can implement to secure their user's information, I would like to discuss **Two-Factor Authentication (2FA)**, **Firewalls** and **Physical Security**.  -->
+
+Following on from the previous question about measures a company can implement to secure their user's information, I would like to discuss **Two-Factor Authentication (2FA)** and **Physical Security**.
+
+### **Two-Factor Authentication (2FA)**
+
+This method should not only be used for marketplace applications, but all companies that store user data. 2FA works by sending a token (a numeric code that's sent via phone or email) to the user, or retrieved from an authenticator such as [Google Authenicator](https://en.wikipedia.org/wiki/Google_Authenticator), which the user then inputs into the website they are trying to log in on. Which then confirms to the system that this is a genuine log in attempt. This significantly decreases the possibility of an attack from a hacker. (read. decreases, not prevents).   
+*This method is not mandatory on some sites and is left up to the user if they wish to use it leaving their users more compromised. However, a great deal more companies are making it mandatory.*
+
+
+<!-- ### **Firewalls**
+
+A company can install both hardware and/or software firewalls.  
+- A hardware firewall is a device that is connected to the company network which filters packets based on a set of criteria. 
+- Software firewalls run on an operating system and intercept the packets as they arrive to computers. 
+
+Firewalls may also be installed so to restrict the possibility of employees watching YouTube videos or using Facebook from their company computer. It achieves this by restricting the flow of packets leaving the company network.
+
+So if a hacker was to try and infiltrate the network with compromised data, then a firewall helps protect against any incoming information if it doesn't meet the strict set of criteria that was put on the system. -->
+
+
+### **Physical Security**
+
+At first this seems silly, but an organisation can implement the best digital security in the world, but it is not complete without physical protection of the hardware that is used.
+
+Some measures include:
+
+- *Locked doors*: If an intruder can just walk in and literally remove a computing device, then everything else is useless. 
+- *Physical intrusion detection*: By using security cameras that detect unauthorized access to the physical locations of the data.
+- *Secured equipment*: Devices should be secured away/down in a manner to prevent them from being stolen.
+- *Environmental monitoring*: An organization’s high-value equipment should be kept in a room that is monitored for temperature, humidity, and airflow to prevent overheating.
+- *Employee training*: One of the most common ways thieves steal information is to steal employee laptops while they're traveling.
 
 
 ***Resources Used:***  
-[1] [Wired](https://www.wired.com/story/capital-one-paige-thompson-case-hacking-spree/)
-[2] [SmartCompany](https://www.smartcompany.com.au/startupsmart/news/clearview-ai-data-breach/)
-[3] [CPO Magazine](https://www.cpomagazine.com/cyber-security/clearview-ai-data-breach-exposes-facial-recognition-firms-client-list/)
+[1] [PressBooks](https://bus206.pressbooks.com/chapter/chapter-6-information-systems-security/)
+
+
 
 *** 
 
 
 ## Q8:
-<!-- Research what your legal obligations are in relation to handling user data and how they can be met for the project	100-200 -->
-***No Resources Used***
+
+In Australia, the legal obligations for tech companies falls under the Australian Privacy Principles (or APPs), which are the cornerstone of the privacy protection framework in the Privacy Act 1988 (Privacy Act). [1]
+
+There are 13 Australian Privacy Principles which govern standards, rights and legal obligations around:  
+
+- *the collection, use and disclosure of personal information*
+- *an organisation or agency’s governance and accountability*
+- *integrity and correction of personal information*
+- *the rights of individuals to access their personal information*  
+
+***Directly quoted from [1]*** 
+
+Organisations not adhering to these rules and regulations can face serious financial penalties for such privacy law breaches.
+
+These penalties are intended to protect Australians (especially children) using the Internet, *'without impeding the continued innovation and development of companies working in the online space [2].'* Also bringing Australia more in line with the General Data Protection Regulation (GDPR) implemented in other parts of the world.
+
+*E.g. A breach is the collection or disclosure of an individuals private information without the individual's consent. This can either be deliberate or accidental.*
+
+
+***Resources Used***  
+[1] [Australian Government | Office of the Australian Information Commissioner](https://www.oaic.gov.au/privacy/australian-privacy-principles/)  
+[2] [McCullough Robertson Lawyers](https://www.mccullough.com.au/2019/04/09/its-no-secret-10-million-penalties-to-be-introduced-for-privacy-law-breaches/)
+
 
 
 ***
 
+
 ## Q9:
-<!-- Describe the structural aspects of the relational database model. Your description should include information about the structure in which data is stored and how relations are represented in that structure.	100-200 -->
 
+A relational database maintains data in tables. They provide an efficient, intuitive, and flexible way to store and access structured information. They consist of:
+- **tables** (also known as relations)
+  - which in turn consist of **columns** (that contain data this is categorized), 
+  - and **rows**, (that contain data defined by the category/column).
 
-***Resources Used:*** 
-[freeCodeCamp](https://www.freecodecamp.org/news/js-type-coercion-explained-27ba3d9a2839/).
+The data in these tables (each with a unique identifier) is accessed by using the SQL programming language which follows the ACID (Atomicity, Consistency, Isolation, Durability) properties. [1]
+
+There are 3 majors components of a model: **Structure**, **Integrity**, and **Manipulation**. The **'Structure'** component is the relation itself, which are defined over types. 
+
+> *"A type is basically a conceptual pool of values from which actual attributes in actual relations take their actual value."* [2]
+
+Finally, the relational model also supports various kinds of keys and these are:
+
+***Super, Candidate, Primary, Foreign*** [3]
+
+- A **Super Key** is a set of attributes such that no two rows may have the same values for these attributes. 
+  - *(e.g. passports/phone numbers)*
+- A **Candidate Key** is a super key with no unnecessary attributes.
+  - *(e.g. we don't need to have a passport and a phone number on the same attribute to identify someone)*
+- **Primary Keys**
+  - *The primary key is the candidate key typically used to find a row and for cross-referencing with other relations.*
+- **Foreign Keys**
+  - *A set of attributes whose values are required to match the values of some candidate/primary key in some other relation.*
+
+***Resources Used:***   
+[1] [Omni-Sci](https://www.omnisci.com/technical-glossary/relational-database)  
+[2] [O'Reilly](https://www.oreilly.com/library/view/sql-and-relational/9781449319724/ch01s04.html)  
+[3] [SWEN 220](http://www.se.rit.edu/~swen-220/slides/SWEN-220-DataModels_01_Relational.pdf)
+
 
 ***
 
 
 ## Q10:
-<!-- Describe the integrity aspects of the relational database model. Your description should include information about the types of data integrity and how they can be enforced in a relational database.	100-200 -->
 
+The **'Integrity'** component of a relational database is a constraint that is a boolean expression that must evaluate to TRUE for a relation (or set of relations) to be in a valid state. [1]
+
+Constraints on a relational database management system are mostly divided into 2 main categories, and they are: 
+
+- Entity integrity constraints
+  - *Primary key attributes don’t permit nulls* [2]
+  - You can have nulls in other positions, just not the primary key as we would never know what data we are referencing. 
+- Referential integrity constraints 
+  - *There mustn’t be any unmatched foreign key values. (if B references A, then A must exist)* [2]
+  - Meaning there must be an equal value of the primary/candidate (target) key.
 
 ***Resources Used:***   
-[GeeksforGeeks](https://www.geeksforgeeks.org/ruby-data-types/)
+[1] [O'Reilly](https://www.oreilly.com/library/view/sql-and-relational/9781449319724/ch01s04.html)  
+[2] [SWEN 220](http://www.se.rit.edu/~swen-220/slides/SWEN-220-DataModels_01_Relational.pdf)  
 
 
 ***
 
 
 ## Q11:
-<!-- Describe the manipulative aspects of the relational database model. Your description should include information about the ways in which data is manipulated (added, removed, changed, and retrieved) in a relational database.	100-200 -->
+
+The manipulative part of a model/relational database can be described in 2 parts (in regards to Computer Science):
+
+- *Relational algebra*, which is a collection of operators that can be applied to relations that—speaking very loosely to allow us to derive “new” relations from “old” ones
+
+- A *relational assignment* operator, which allows the value of some relational expression to be assigned to some relation and is fundamentally how updates are done in the relational model. [3]
+
+There are 3 basic operations/manipulations performed on relational databases/model, and they are: *insert, update, and delete* [1].  All three statements allow you to change data in the database, not changing the structure but changing the content. They are different from the SELECT statement, which only allows you to read the data from the database(i.e. not manipulation). [4]
+
+
+- **Insert Operation**  
+  The INSERT statement allows you to add new records to your database table. Generally, it is used to add records at the end of the table. One thing which is important whenever you do INSERT is that your data needs to satisfy all the rules in your database. [4]
+
+- **Update Operation**  
+  Allows you to modify existing records in a table and  will work on a set of records and not on one record (depending on how you run your UPDATE). [4]
+
+- **Delete Operation**  
+  The DELETE statement has the ability to delete one or more records in full. We're not talking about deleting individual column content because we can't do that. Once you delete a series of records, they're gone and there's no way of getting them back. We also need to make sure that when we delete any record from the table, that entry (or its value) is not being used by any other table. [4]
+
+
+Whenever one of these operations are applied, **integrity constraints** specified on the relational database schema must never be violated. [1]
+
+
+
+***Resources Used:***   
+[1] [Guru99](https://www.guru99.com/relational-data-model-dbms.html/)  
+[2] [SWEN-220](http://www.se.rit.edu/~swen-220/slides/SWEN-220-DataModels_01_Relational.pdf)  
+[3] [O'Reilly](https://www.oreilly.com/library/view/sql-and-relational/9781449319724/ch01s04.html)  
+[4] [Simplilearn](https://www.simplilearn.com/data-manipulation-in-sql-tutorial)  
 
 
 
@@ -199,7 +425,67 @@ Reference model depicting the overall framework architecture
 
 
 ## Q12:
-<!-- Identify and explain the workings of TWO sorting algorithms and discuss and compare their performance/efficiency (i.e. Big O)	300-500 -->
+
+The 2 sorting algorithms I wised to to investigate are:
+- bubble sort, and
+- merge sort
+
+First I would like to showcase how Big O works. As can be seen in the graph below we have 5 different graphs. On our X Axis we have the number of pieces of data (n), and on the Y axis we have time (t). As can be seen by the first graph closest to the X axis. No matter how many pieces of data we have, our time does not increase, however on the graph closest to the Y axis, we have a graph O(n²) where as our data increases, our time increases exponentially. Where the former is very efficient and *ideal*, and the latter being very inefficient, ideally trying to *avoid* this method. 
+
+![Big O Comparison Graph](img/bigO_comparison_graphs.jpg)
+[1]
+
+
+![Big O Sorting Algorithms](img/sorting_algorithms_bigO.jpg)
+[1]
+
+Above we can see different types of sorting algorithms in regards to their space and time complexity. The 2 algorithms I have chosen are Bubble Sort and Merge Sort, due to the nature of how they scale. In the picture below, it shows how quickly time increases when the size of our data pool increases. 
+
+![Big O Sorting Algorithms](img/sorting_algorithms_growth_rate_bigO.jpg)
+[1]
+
+### Bubble Sort
+So a little about Bubble Sort. This algorithm uses a double *'for loop'* to iterate through the input array, and constantly compares and swaps adjacent elements if they are out of order. The outer *'for loop'*  makes sure that there is at least one pass through the inner loop per element, where the inner *'for loop'*  does all the swapping.
+
+```
+Pass One:
+[ 5, 3, 4, 1, 2 ] 5 > 3 Swap
+[ 3, 5, 4, 1, 2 ] 5 > 4 Swap
+[ 3, 4, 5, 1, 2 ] 5 > 1 Swap
+[ 3, 4, 1, 5, 2 ] 5 > 2 Swap
+[ 3, 4, 1, 2, 5 ] 
+
+```
+In this example, we can see 1 pass out of a total of 3 passes needed to complete the sorting and the actions taken. The reason Bubble Sort is O(n²) time (as seen in the table), is due to each pass of the array, needing to iterate through the full array another whole time, so that it can do the comparisons and swaps.
+
+
+### Merge Sort
+
+
+The other chosen algorithm (Merge Sort) that we're looking at, is one of the most efficient. The algorithm is recursive and it is also classified as a Divide and Conquer (D&C) algorithm.
+
+D&C is a common pattern for a lot of algorithms, and it follows these three steps:
+1. Break down (divide) the original input into smaller instances of the same type. 
+2. Conquer these smaller instances recursively.
+3. Recombine the results.
+
+In the case of Merge Sort we recursively call a method to divide the input in half, over and over, until we get to a single element array, as seen in the image below.
+
+![Demonstration of Merge Sort](img/merge_sort_bigO.jpg)
+[3]
+
+When both arrays are sorted, we then walk through both arrays at same time and compare the lowest values which are then added to the sorted output array. 
+If one iteration completes then all the remaining elements of the other array are larger and can therefore be added to the sorted output array. 
+
+We can compare the recursive calls in the tree diagram, to the characteristic halving of O(log(n)) functions. Additionally there is iteration through the array at each level of recursion. So, 'n' elements are iterated log(n) times, in other words, O(n*log(n))—log linear on the graph included earlier. Due to this action, this method, Merge Sort, is substantially faster than Bubble Sort. [3]
+
+
+
+***Resources Used:*** 
+
+[1] [Cooervo Algorithms and Data Structures](https://cooervo.github.io/Algorithms-DataStructures-BigONotation/index.html)  
+[2] [Cooervo Algorithms and Data Structures (Algorithms)](https://cooervo.github.io/Algorithms-DataStructures-BigONotation/algorithms.html)  
+[3] [Medium](https://medium.com/@ssbothwell/sorting-algorithms-and-big-o-analysis-332ce7b8e3a1)   
 
 
 
@@ -207,25 +493,227 @@ Reference model depicting the overall framework architecture
 
 
 ## Q13:
-<!-- Identify and explain the workings of TWO search algorithms and discuss and compare their performance/efficiency (i.e. Big O)	300-500 -->
+
+To nutshell a search algorithm, we can describe it as such; *to find the position of a value within a list.*
+
+There are 2 main algorithms that perform this task, and they are:
+
+- **Linear search** 
+  - *An algorithm that checks the list sequentially until the required value is found*
+- **Binary search**
+  - *This requires a sorted input list, it then looks for the value in the middle of the list. Then it recursively removes half of the list of values that are either larger or smaller than the required value.*
+
+Regarding Big O, let;s revisit the graph of functions to see which is more efficient than the next.
+
+![Big O Comparison Graph](img/bigO_comparison_graphs.jpg)
+[1]
+
+A little bit about each method.
+
+### Linear Search
+This search method is the most basic. It works by simply checking each element sequentially in the list and comparing it against the value we are after, until the correct value is found.  
+Therefore, the number of comparisons undertaken depends on the length of the list given.
+So, if we were to search the list a large number of times and assuming that we want to look for all elements at some point, then on average we would search through half of the list each time. Meaning that the comparisons in a Linear Search scales linearly with the size of the list itself. We can write this as such, N/2, where N is the number of operations. This allows us to determine that a Linear Search has the order of N, i.e. O(N) in Big O.
+
+|   Algorithm   | Best case | Expected | Worst case |
+|:-------------:|:---------:|:--------:|:----------:|
+| Linear search |    O(1)   |   O(N)   |    O(N)    |
+
+This table shows the best and worst case for this search algorithm. Where the best case is if the first element in the list is the required value, if not, then our graph scales linearly. 
+
+
+### Binary Search
+
+Binary Search is the more efficient search algorithm out of the 2 methods, but it relies on the input list being sorted. We recursively apply the search process to smaller and smaller sub-lists of the original list by halving the search range each time.
+
+It works by first checking what the middle element of the list is. If it is the value we are after, then we are finished. If it isn't, and it is a higher value than what we want, then repeat the search process for the middle element of the new smaller sub-list that consists of all the numbers that are less than the first middle element. We continuously apply this method until we reach our desired element.   
+The number of comparisons needed, scale with the size of the list again, but much slower than Linear Search. We can summarise this as log 2N, or in Big O notation as simple O(log N) as we ignore the '2' due to it being insignificant.
+
+
+|   Algorithm   | Best case | Expected | Worst case |
+|:-------------:|:---------:|:--------:|:----------:|
+| Binary search |    O(1)   | O(log N) |  O(log N)  |
+
+
+he best case scenario for Binary Search happens when the first element of the list is the one we are looking for again, meaning only 1 search was required.
+
+
+The previous tables discuss Time Complexity of each search algorithms, but we can also describe their space complexity – which is the units of space required for storage, which excludes the space required to store the original input list.
+
+|   Algorithm   | Space complexity |
+|:-------------:|:----------------:|
+| Linear search |       O(1)       |
+| Binary search |       O(1)       |
+
+
+None of these algorithms require much storage space, excluding the size of the input list. [1]
+
+***Resources Used:*** 
+
+[1] [Python Textbook](https://python-textbok.readthedocs.io/en/1.0/Sorting_and_Searching_Algorithms.html)
+
+
 
 ***
 
 
 
 ## Q14:
-<!-- Conduct research into a marketplace website (app) and answer the following parts:  a. List and describe the software used by the app.
-  b. Describe the hardware used to host the app.
-  c. Describe the interaction of technologies within the app
-  d. Describe the way data is structured within the app
-  e. Identify entities which must be tracked by the app
-  f. Identify the relationships and associations between the entities you have identified in part (e)
-  g. Design a schema using an Entity Relationship Diagram (ERD) appropriate for the database of this website (assuming a relational database model)	50-100 per part -->
+
+The marketplace website/app I have chosen to research is [Fiverr](https://www.fiverr.com/?source=top_nav). For my own Rails assessment app, I plan to do a marketplace for skill-sharing, which is why I am analysing this site. Fiverr is an online marketplace that focuses on providing a platform for freelancers to offer their digital services to customers worldwide in over 300 categories. 
+
+
+### **a) Application and Data Technologies**
+
+Below is a table of all the software that is used in the creation of Fiverr. [1]
+
+> |           |              |            |            |             |               |
+> |-----------|--------------|------------|------------|-------------|---------------|
+> |   jQuery  | JavaScript   | Python     | nginx      | React       | MySQL         |
+> | MongoDB   | Google Drive | Redis      | Sass       | Ruby        | Android SDK   |
+> | Rails     | Go           | RabbitMQ   | Amazon RDS | Objective-C | Handlebars.js |
+> | Memcached | Apache Spark | Hadoop     | R Language | Neo4j       | InfluxDB      |
+> | Sinatra   | Unicorn      | Cloudinary | MEAN       | Grape       |               |
+
+According to an answer on Quora by Mohammed Jahangir Hossain, it seems that Rails is used for the backend framework [2].
+
+Looking at the listed technologies used, there is a substantial amount going on here. My guess is that it would seem that React is probably for parts/most of the frontend of the main website as they are using MEAN for their tech stack, but they don't list Angular or Express.js. And using both SQL and NoSQL databases in MongoDB and MySQL. There is a large mix of technologies at play here and there doesn't seem to be an site expressing exactly how they all integrate with one another.
+ 
+<br>
+
+### **b) Hardware used for Hosting**
+
+Unfortunately it wasn't possible to find who hosts Fiverr as they mask their IP address using Cloudfare, Inc. I used [this website](https://www.whoishostingthis.com/#search=www.fiverr.com) to source this information. As we can't find the exact company that hosts the site, we will take a short deep dive into Cloudfare's hardware instead.
+
+CloudFlare provides protection from Distributed Denial of Service (DDoS) attacks, which is when someone tries to overwhelm a site with requests from all around the world, which make cause a server to overload and be unable to provide its services to its clients. [5]
+
+Cloudfare does this with their new *(Gen X)* servers which are deployed across major US cities, and soon to be worldwide *(as of February 2020)*. Compared to their previous *(Gen 9)* servers, *pictured below*, *(Gen X)* processes 36% more requests while substantially more cosft-effective. [6]
+
+![Cloudfare Gen 9 Server](img/cloudfare_gen_9.png)
+*Figure above: Cloudfare's Gen 9 Server*
+
+![Cloudfare Gen X Server](img/cloudfare_gen_x_server.jpg)
+*Figure above: Cloudfare's newest Gen X Server*
+
+ 
+<br>
+
+### **c) Interaction of Technologies**
+
+After exploring further, [w3techs | sites](https://w3techs.com/sites) was brought to my attention which gave more insight into Fiverr' tech stack. From here, it was seen that PHP and Ruby is used as the server-side languages and JavaScript as client-side. This makes me believe that Rails (alongside PHP) was used in combination with React and jQuery to build the majority of site. Maybe PHP was used to interact with one of the databases MySQL or MongoDB, and Rails the other [4].  
+Further estimates; 
+- HTML and Sass for the layouts/views
+- Android SDK for the Android app
+- Objective-C for the iOS app
+- Cloudinary for image storage
+- Amazon RDS for scalability of their databases
+- Google Drive and Gmail for company utilised technologies and email server provider
+- nginx, Redis, Memcached, Neo4j, for additional database/memory options for their databases
+- RabbitMQ for a messaging platform
+- Handlebars.js for HTML and JS code optimisations
+- Apache Spark and Hadoop for big data analysis
+- Go in combination with InfluxDB for more database options *(so many databases!)*
+- Sinatra as another micro-framework used somewhere
+- MEAN stack?
+- *unsure of Grape and Unicorn*
+
+<br>
+
+### **d) Data Structure**
+  <!-- d. Describe the way data is structured within the app -->
+
+As Fiverr uses both relational and non-relational databases, it is hard to say exactly how it is structured within the app. But, we can analyse how data is structured in both databases. 
+
+Fiverr Non-Relational Database: *MongoDB*
+- MongoDB is a no-SQL database that structures its data in a collection of JSON documents
+Fiverr Relational Database: *MySQL*
+- MySQL is an SQL database that structures its data in tables with rows and columns where one queries a table for a certain piece of data. Some of these pieces of data is related to another data set through an identifying key, which is where it gets its 'relational' name from. 
+
+
+<br>
+
+### **e) Tracked Entities**
+
+Thinking about the entities Fiverr would track with their website, this is my take on what I believe they are as there was no available information on this topic.
+
+>|     MAIN ENTITIES    |      USER     |       SELLER      |      CATEGORIES     |      GIG     |    SERVICES    |  REVIEW  |  BUSINESS ANALYTICS |
+>|:--------------------:|:-------------:|:-----------------:|:-------------------:|:------------:|:--------------:|:--------:|:-------------------:|
+>| Children of Entities |  credentials  |       rating      |    graphic_design   |    images    | sub_categories |   user   |     company_info    |
+>|                      |      type     |        name       |  digital_marketing  | sub_category |                |  rating  |       averages      |
+>|                      |  account_type |    description    | writing_translation |     plans    |                | location | financial_analytics |
+>|                      |  description  |      language     |   video_animation   |     queue    |                |  review  |  sellers_analytics  |
+>|                      |     image     |       skills      |     music_audio     |    reviews   |                |          |   users_analytics   |
+>|                      | personal_info | professional_info |   programming_tech  |     about    |                |          |  category_analytics |
+>|                      |     saves     |  linked_accounts  |       business      |    seller    |                |          |                     |
+>|                      |               |       image       |      lifestyle      |     saves    |                |          |                     |
+>|                      |               |                   |      industries     |     price    |                |          |                     |
+
+*Author Note: Just want to point out that I have only included 'sub-categories' in for services. This was due to the sheer amount of sub-categories for each category present, being too many to put on one table.*  
+
+Looking around different parts of their website, these are some of the things I believe Fiverr to track and store on their database. They have a very large selection of services available, so tracking and storing them all would have be time consuming. I have also included Business Analytics as I would imagine they track a lot of data, not necessarily store it all as they would be unnecessarily using space on their databases, however, they would have a backend page to show a lot of data to authorized employees to manage it and utilise to make further business decisions to stay *'Agile'*. 
+
+<br>
+
+### **f) Relationship between Entities**
+  As can be seen in *Q14: (e)*, my interpretation of how these entities are connected would be as followed.
+
+**Table:  *USERS***
+- has many Messages
+- has one Seller *(note: if account_type is 'Seller')*
+
+**Table:  *MESSAGES***
+- has many Users
+
+**Table:  *SELLERS***
+- has one User
+- has many Gigs
+
+**Table:  *CATEGORIES***
+- has many Services
+
+**Table:  *SERVICES***
+- Sub Category belongs to Categories
+
+**Table:  *GIGS***
+- belongs to Seller
+- belongs to Services / Sub Category
+- has many Reviews
+
+**Table:  *REVIEWS***
+- belongs to Gig
+- belongs to User
+
+**Table:  *BUSINESS ANALYTICS***
+- *no connections*
+
+<br>
+
+### **g) Entity Relationship Diagram Schema**
+
+[Here is the link](https://dbdiagram.io/d/5f0d495f0425da461f04a1d6) to the Entity Relationship Diagram for my assumption of Fiverr's database, designed on [dbdiagram.io](https://dbdiagram.io/home).
+
+**NOTE!** *If unable to see the relationships in the picture, please visit the link above to view the ERD online. Here, you can hover over the tables and lines to see the relationships. bdiagram.io use the 1 and * to denote 'one' and 'many', and with 'many' to 'many' relationships, it was advised we use two one-many relations.*
+
+![ERD Diagram](img/fiverr_erd.png)
+
+As there was no information regarding the layout of Fiverr's database, but as can be seen in *Q14: (f)* I was to use an educated guess about the actual entities and relationships used in the site. I know that my interpretation will not be correct as I am but a student. But this is my interpretation on how some of the entities may be connected. 
+
+
+***Resources Used:***  
+[1] [StackShare](https://stackshare.io/fiverr/fiverr)  
+[2] [Quora](https://www.quora.com/What-backend-technologies-does-Fiverr-use)  
+[3] [dbdiagram.io](https://dbdiagram.io/home)  
+[4] [w3techs](https://w3techs.com/sites/info/fiverr.com)  
+[5] [Cloudfare | Blog | DDoS Prevention](https://blog.cloudflare.com/ddos-prevention-protecting-the-origin/)  
+[6] [Cloudfare | Blog | Cloudflare’s Gen X Servers](https://blog.cloudflare.com/cloudflares-gen-x-servers-for-an-accelerated-future/)  
+
+<br>
+
+
 
 
 ***
-
-
+Thanks for reading.  
 [Go to Navigation at Top](#Navigation).
 
 
