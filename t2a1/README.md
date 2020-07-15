@@ -3,6 +3,10 @@
 ![GitHub followers](https://img.shields.io/github/followers/SimoSultan?style=social)  
 ![Twitter Follow](https://img.shields.io/twitter/follow/simo_sultan?style=social)
 
+**NOTE:** *To find [my README.md](https://github.com/SimoSultan/ca-assignments/tree/master/t2a1) on GitHub if you're reading the PDF...*  
+**SEARCH:** *SimoSultan -> Repositories -> ca-assignments -> t2a1*  
+
+
 #### Navigation:
 - [**Q1**](#Q1) - Rails Architecture
 - [**Q2**](#Q2) - Pros and Cons of a PostgreSQL Database
