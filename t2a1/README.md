@@ -36,7 +36,7 @@ These features are discussed in further detail below.
 ### **Model-View-Controller Architecture**
 
 - **Model**  
-The Model represents the information in the database and handles the business logic of the application, where it manipulates and validates the data. Then passing that information back to the controller, which in turn sends it to the view. Some of the major database that are used: (MySQL, Oracle, MS SQL Server, PostgreSQL, IBM DB2, and more)
+The Model represents the information in the database and handles the business logic of the application, where it manipulates and validates the data. Then passing that information back to the controller, which in turn sends it to the view. Some of the major databases that the model connect to that are used in Rails are: MySQL, Oracle, MS SQL Server, PostgreSQL, IBM DB2, and more.
 
 - **View**  
 The View is the front-end of the application, AKA the user interface (UI), AKA the webpage that the user 'views'. These are HTML files with Ruby code embedded in them (ERB). Generally, this Ruby code is fairly simple, and it accesses the variables that are in the corresponding Controller Action, which was passed from the Model/Database.
@@ -52,13 +52,13 @@ Representational State Transfer (REST) relies on the HTTP protocol for all the C
 
 The interaction between these components can be seen below in the figure.
 
-![Overall Framework Architecture](./img/rails_arch.png)
+![Overall Framework Architecture](./img/rails_arch.png)  
 Reference model depicting the overall framework architecture.  
 ***Note: original source of image cannot be found due to a broken link on referenced webpage.***
 
 
 ### **Convention Over Configuration**
-Rails has been built with convention in mind. This concept was introduced by David Heinemeier Hansson (creator of Ruby on Rails), as it decreases the number of decisions a developer is required to make, without losing flexibility. For a very small example, when naming controllers (plural) vs model (singular). 
+Rails has been built with convention in mind. This concept was introduced by David Heinemeier Hansson (creator of Ruby on Rails), as it decreases the number of decisions a developer is required to make, without losing flexibility. For a *very small* example is when naming files in the MVC, i.e. controllers should be plural, and a model should be singular. 
 
 ***Resources Used:***  
 [1] [Adrien Mejia ](https://adrianmejia.com/ruby-on-rails-architectural-design/#:~:text=Model%2DView%2DController%20Pattern,deals%20with%20the%20application%20flow.)  
@@ -83,20 +83,20 @@ PostgreSQL (initially called Postgres) was created by a computer science profess
 - Easy to use.
 - Data types are user defined.
 - Open source (can customise in any way with minimal effort and no attached costs).
-- Make use of Stored procedures.
-- Immunity to over-deployment (as there is no associated licensing cost for the software)
-- Designed for high volume environments (using a multiple row data storage strategy called MVCC)
-- Many high quality GUI Tools
-- Supports geographic objects so it can be used as a geospatial data store for location-based services and geographic information systems
-- Low maintenance administration
-- Run dynamic websites and web apps as a LAMP stack option
+- Make use of stored procedures.
+- Immunity to over-deployment (as there is no associated licensing cost for the software).
+- Designed for high volume environments (using a multiple row data storage strategy called MVCC).
+- Many high quality GUI tools.
+- Supports geographic objects so it can be used as a geospatial data store for location-based services and geographic information systems.
+- Low maintenance administration.
+- Run dynamic websites and web apps as a LAMP stack option.
 
 **Cons**
 - Considerably slower than other popular databases/MySQL (focuses on compatibility over speed).
 - Does not support the entire ANSI SQL 92' standard.
 - Difficult installation for beginners.
 
-As can be seen, the amount of advantages significantly outweighs its disadvantages, making this database a highly popular model to use.
+As can be seen, the amount of advantages significantly outweighs its disadvantages, making this database a highly popular one to use.
 
 ***Resources Used:***  
 [1] [EDUCBA](https://www.educba.com/what-is-postgresql/)   
@@ -108,9 +108,9 @@ As can be seen, the amount of advantages significantly outweighs its disadvantag
 
 ## Q3:
 
-In 2001, a group of 17 individuals created the **Agile Manifesto**, that outlines their beliefs on how software projects should be run.
+In 2001, a group of 17 individuals created the **Agile Manifesto** which outlines their beliefs on how software projects should be run.
 
-The baseline of *'Agile'* is more a philosophy than a methodology. It is all about moving fast and releasing incremental, feedback-driven changes from needs of the users, more often. It has been ever growing and used instead of the more traditional *'Waterfall method'*. Where that idea is to spend several months or years on a project without ever showing it to the user.
+The baseline of *'Agile'* is more a philosophy than a methodology. It is all about moving fast and releasing incremental, feedback-driven changes from the needs of users, more often. It has been ever growing and used instead of the more traditional *'Waterfall method'*, where that idea is to spend several months or years on a project without ever showing it to the user until release.
 
 As part of the Agile Manifesto, the creators defined 4 key values that all projects should adhere to:
 
@@ -121,22 +121,22 @@ As part of the Agile Manifesto, the creators defined 4 key values that all proje
 
 They then presented these values in a more actionable method, seen in this list of 12 guiding principles: [2]
 
-- The highest priority is to satisfy the customer through early and continuous delivery
-- Welcome changing requirements, even late in development
-- Deliver working software frequently, from a couple of weeks to a couple of months
-- Stakeholders and developers must collaborate on a daily basis
+- The highest priority is to satisfy the customer through early and continuous delivery.
+- Welcome changing requirements, even late in development.
+- Deliver working software frequently, from a couple of weeks to a couple of months.
+- Stakeholders and developers must collaborate on a daily basis.
 - Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done.
 - Face-to-face meetings are deemed the most efficient and effective format for project success
-- A final working product is the ultimate measure of progress
+- A final working product is the ultimate measure of progress.
 - Agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely.
-- Continuous attention to technical excellence and good design enhances agility
-- Simplicity—maximizing the work not done—is an essential element
-- The best architectures, requirements, and designs emerge from self-organizing teams
-- At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly
+- Continuous attention to technical excellence and good design enhances agility.
+- Simplicity—maximizing the work not done—is an essential element.
+- The best architectures, requirements, and designs emerge from self-organizing teams.
+- At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.
 - If you think of software development today, these principles, and Agile in general, can be seen as a response to sky-high user expectations. 
 
 The key part of Agile is taking the time to understand what works and what doesn't with the team. This should be done at the end of every sprint and upon completion of the project.
-Summing up Agile is best used by the word **'iterative'**.  [1]
+Top sum up **Agile** is best used by the word **'iterative'**.  [1]
 
 
 ***Resources Used:***  
@@ -151,7 +151,7 @@ Summing up Agile is best used by the word **'iterative'**.  [1]
 ## Q4:
 
 Linus Torvalds first released Git in 2005, and was created to be a better source control manager than what was available at the time. 
-Git is both free and open source, designed to be optimised for speed and efficiency, all whilst being lightweight, making it pretty much the standard of version control in industry. Companies integrate Git into their workflow to accomplish tasks in a consistent and productive manner. According to Atlassian [1] there are 4 types of workflows that companies can leverage. 
+Git is both free and open source, designed to be optimised for speed and efficiency, all whilst being lightweight. Making it pretty much the standard of version control in industry. Companies integrate Git into their workflow to accomplish tasks in a consistent and productive manner. According to Atlassian [1] there are 4 types of workflows that companies can leverage:
 - Centralised
 - Feature Branch
 - Gitflow
@@ -160,11 +160,11 @@ Git is both free and open source, designed to be optimised for speed and efficie
 Here we will be looking at the Feature Branch workflow a little closer. Unlike the Centralized workflow, where there are no branches and work is commited by the team into the 'master' branch, all feature development takes place on branches in this workflow. If a company implements a continuous integration environment, this workflow is highly advantageous as features can be developed, and when working, integrated straight into the 'master'. Meaning, the 'master' will never contain any broken code as the main codebase is never disturbed. Using these feature branches allows developers to utilise 'Pull Requests' which provides a medium through the company to ask for help and suggestions, receive feedback on their code and have their code signed off on before it is integrated into the 'master' branch. This workflow can even be incorporated into the Gitflow, and Git Forking workflows, which actually uses the Feature Branch workflow in regards to their branching models.
 
 #### Additionally
-Below I have provided a great infograph from [Tower](https://www.git-tower.com/learn/cheat-sheets/vcs-workflow) on the type of commands that are so commonly used in a Git Workflow. It is a long/large picture, but a great one that I wished to include for extra information. 
+Below I have provided a great infograph from [Tower](https://www.git-tower.com/learn/cheat-sheets/vcs-workflow) on the type of commands that are so commonly used in a Git Workflow. It is a long/large picture, but a great one that I wished to include for a visualisation of working with Git. 
 
 ***Resources Used:***  
 [1] [Atlassian](https://www.atlassian.com/git/tutorials/comparing-workflows)  
-![Git Workflow Flowchart](img/workflow-of-version-control.png)
+![Git Workflow Flowchart](img/workflow-of-version-control.png)  
 Image Reference: [Tower](https://www.git-tower.com/learn/cheat-sheets/vcs-workflow)
 
 ***
@@ -174,19 +174,17 @@ Image Reference: [Tower](https://www.git-tower.com/learn/cheat-sheets/vcs-workfl
 
 > *"The goal of testing software is not to find bugs or to make software better. It’s to reduce risk by proactively finding and eliminating problems which would most greatly impact the customer using the software."* [1]
 
-We do this by identifying which sections of the software are most likely to have the biggest risk of causing this impact, and determining an array of tests to ensure the functionality is working correctly and as intended. 
+We test software by identifying which sections are most likely to have the biggest risk of causing this impact, and determining an array of tests to ensure the functionality is working correctly and as intended. 
 
 If the test results in an error, the bug is logged and ranked on severity. Most of these bugs will be fixed, but if they have a low impact, they might be noted and remain in the system with a solution in the FAQs. 
 
-The 2 most popular ways to test software come down to manual vs automated. To talk a little about manual testing.
+The 2 most popular ways to test software come down to manual vs automated. To briefly cover Manual Testing, first here is an image on the different types of Manual Testing we see in industry: [2]
 
-**Here are some types of manual testing:** [2]
 ![Types of Manual Testing](img/typesofmanualtesting.png)  
 
 Manual testing is where Testers manually run different use cases of the software to find bugs. Automated tests can be then created after first running these manual tests. 
-Below is an outline on the process of running manual tests.
+Below is an outline on the process of running manual tests:
 
-How to perform Manual Testing
 - Read the software documentation plan.
 - Determine Test cases that cover the requirements in the docs.
 - Review test cases with the team lead and client.
@@ -202,7 +200,7 @@ To leave you with a few interesting facts.
 
 
 ***Resources Used:***  
-[1] [usersnap](https://usersnap.com/blog/software-testing-basics/)  
+[1] [Usersnap](https://usersnap.com/blog/software-testing-basics/)  
 [2] [Guru99](https://www.guru99.com/manual-testing.html)
 
 
@@ -223,11 +221,11 @@ There are several different security precautions that companies and individuals 
 
 ### **Confidentiality:**
 The underlying essence of confidentiality comes from the protection of information. Meaning, we need to be able to restrict access to only those who are allowed to see it.  
-*E.g. (no prying eyes / hackers allowed here)*   
+*E.g. Keeping hackers prying eyes off of other individual's information.*   
 
 ### **Integrity:**
 The integrity of information is about ensuring that the information being accessed is of true intention. Meaning that information has not been altered in any way to mis-represent its contents.   
-*E.g. This can be in the form of a hacker changing the contents of a file, or when there may be a power surge that accidentally deletes or corrupts a file/information.*
+*E.g. This can be in the form of a hacker changing the contents of a file, or when there may be a power surge that accidentally deletes or corrupts a file or information.*
 
 ### **Availability:**
 
@@ -268,7 +266,7 @@ Following on from the previous question about measures a company can implement t
 ### **Two-Factor Authentication (2FA)**
 
 This method should not only be used for marketplace applications, but all companies that store user data. 2FA works by sending a token (a numeric code that's sent via phone or email) to the user, or retrieved from an authenticator such as [Google Authenicator](https://en.wikipedia.org/wiki/Google_Authenticator), which the user then inputs into the website they are trying to log in on. Which then confirms to the system that this is a genuine log in attempt. This significantly decreases the possibility of an attack from a hacker. (read. decreases, not prevents).   
-*This method is not mandatory on some sites and is left up to the user if they wish to use it leaving their users more compromised. However, a great deal more companies are making it mandatory.*
+*This method is not mandatory, and some sites leave it up to the user if they wish to use it, in turn leaving their users more compromised. However, a great deal more companies are making it a mandatory step of sign up.*
 
 
 <!-- ### **Firewalls**
@@ -307,14 +305,12 @@ Some measures include:
 
 In Australia, the legal obligations for tech companies falls under the Australian Privacy Principles (or APPs), which are the cornerstone of the privacy protection framework in the Privacy Act 1988 (Privacy Act). [1]
 
-There are 13 Australian Privacy Principles which govern standards, rights and legal obligations around:  
+There are 13 Australian Privacy Principles which govern standards, rights and legal obligations around: [1]  
 
-- *the collection, use and disclosure of personal information*
-- *an organisation or agency’s governance and accountability*
-- *integrity and correction of personal information*
-- *the rights of individuals to access their personal information*  
-
-***Directly quoted from [1]*** 
+- *The collection, use and disclosure of personal information.*
+- *An organisation or agency’s governance and accountability.*
+- *Integrity and correction of personal information.*
+- *The rights of individuals to access their personal information.*  
 
 Organisations not adhering to these rules and regulations can face serious financial penalties for such privacy law breaches.
 
@@ -335,13 +331,13 @@ These penalties are intended to protect Australians (especially children) using 
 ## Q9:
 
 A relational database maintains data in tables. They provide an efficient, intuitive, and flexible way to store and access structured information. They consist of:
-- **tables** (also known as relations)
-  - which in turn consist of **columns** (that contain data this is categorized), 
-  - and **rows**, (that contain data defined by the category/column).
+**Tables** (also known as relations)
+- which in turn consist of **columns** (that contain data this is categorized), 
+- and **rows**, (that contain data defined by the category/column).
 
 The data in these tables (each with a unique identifier) is accessed by using the SQL programming language which follows the ACID (Atomicity, Consistency, Isolation, Durability) properties. [1]
 
-There are 3 majors components of a model: **Structure**, **Integrity**, and **Manipulation**. The **'Structure'** component is the relation itself, which are defined over types. 
+There are 3 majors components of a model: **Structure**, **Integrity**, and **Manipulation**. The **'Structure'** component is the relation itself, which is defined over types. 
 
 > *"A type is basically a conceptual pool of values from which actual attributes in actual relations take their actual value."* [2]
 
@@ -390,28 +386,24 @@ Constraints on a relational database management system are mostly divided into 2
 
 ## Q11:
 
-The manipulative part of a model/relational database can be described in 2 parts (in regards to Computer Science):
+The manipulative part of a relational database can be described in 2 parts (in regards to Computer Science):
 
 - *Relational algebra*, which is a collection of operators that can be applied to relations that—speaking very loosely to allow us to derive “new” relations from “old” ones
 
 - A *relational assignment* operator, which allows the value of some relational expression to be assigned to some relation and is fundamentally how updates are done in the relational model. [3]
 
-There are 3 basic operations/manipulations performed on relational databases/model, and they are: *insert, update, and delete* [1].  All three statements allow you to change data in the database, not changing the structure but changing the content. They are different from the SELECT statement, which only allows you to read the data from the database(i.e. not manipulation). [4]
-
+There are 3 basic operations/manipulations performed on relational databases/model, and they are: *insert, update, and delete* [1].  All three statements allow you to change data in the database, not changing the structure but changing the content. They are different from the SELECT statement, which only allows you to read the data from the database (i.e. not manipulation). [4]
 
 - **Insert Operation**  
-  The INSERT statement allows you to add new records to your database table. Generally, it is used to add records at the end of the table. One thing which is important whenever you do INSERT is that your data needs to satisfy all the rules in your database. [4]
+  The INSERT statement adds new records to your database table which are usually added at the end of the table, on the condition the data satisfies the rules in the database.[4]
 
 - **Update Operation**  
-  Allows you to modify existing records in a table and  will work on a set of records and not on one record (depending on how you run your UPDATE). [4]
+  The UPDATE statement allows us to modify existing records/rows in a table. [4]
 
 - **Delete Operation**  
-  The DELETE statement has the ability to delete one or more records in full. We're not talking about deleting individual column content because we can't do that. Once you delete a series of records, they're gone and there's no way of getting them back. We also need to make sure that when we delete any record from the table, that entry (or its value) is not being used by any other table. [4]
-
+  The DELETE statement has the ability to delete one or more records in full. And we must ensure that the record / value is not being used by another table, otherwise we will cause an error due to a relation missing. [4]
 
 Whenever one of these operations are applied, **integrity constraints** specified on the relational database schema must never be violated. [1]
-
-
 
 ***Resources Used:***   
 [1] [Guru99](https://www.guru99.com/relational-data-model-dbms.html/)  
@@ -426,23 +418,20 @@ Whenever one of these operations are applied, **integrity constraints** specifie
 
 ## Q12:
 
-The 2 sorting algorithms I wised to to investigate are:
-- bubble sort, and
-- merge sort
+The 2 sorting algorithms I wish to investigate are **Bubble Sort** and **Merge Sort**.
 
-First I would like to showcase how Big O works. As can be seen in the graph below we have 5 different graphs. On our X Axis we have the number of pieces of data (n), and on the Y axis we have time (t). As can be seen by the first graph closest to the X axis. No matter how many pieces of data we have, our time does not increase, however on the graph closest to the Y axis, we have a graph O(n²) where as our data increases, our time increases exponentially. Where the former is very efficient and *ideal*, and the latter being very inefficient, ideally trying to *avoid* this method. 
+First let's talk about how Big O works. As can be seen in the Comparison graph below we have 5 different graphs, and on our X Axis we have the number of pieces of data (n), and on the Y axis we have time (t). Seen in first graph closest to the X axis O(1), no matter how many pieces of data we have, our time does not increase. However, on the graph closest to the Y axis O(n², as our data increases, our time increases exponentially. Where the former is very efficient and *ideal*, and the latter being very inefficient, ideally a method we should try to *avoid*. 
 
 ![Big O Comparison Graph](img/bigO_comparison_graphs.jpg)
-[1]
-
+[1] Figure above: *Big O Comparison Graph*.
 
 ![Big O Sorting Algorithms](img/sorting_algorithms_bigO.jpg)
-[1]
+[1] Figure above: *Big O in regards to Sorting algorithms*.
 
 Above we can see different types of sorting algorithms in regards to their space and time complexity. The 2 algorithms I have chosen are Bubble Sort and Merge Sort, due to the nature of how they scale. In the picture below, it shows how quickly time increases when the size of our data pool increases. 
 
 ![Big O Sorting Algorithms](img/sorting_algorithms_growth_rate_bigO.jpg)
-[1]
+Figure above: *Time growth rates in regards to Big O and number of iterations.*.
 
 ### Bubble Sort
 So a little about Bubble Sort. This algorithm uses a double *'for loop'* to iterate through the input array, and constantly compares and swaps adjacent elements if they are out of order. The outer *'for loop'*  makes sure that there is at least one pass through the inner loop per element, where the inner *'for loop'*  does all the swapping.
@@ -472,7 +461,7 @@ D&C is a common pattern for a lot of algorithms, and it follows these three step
 In the case of Merge Sort we recursively call a method to divide the input in half, over and over, until we get to a single element array, as seen in the image below.
 
 ![Demonstration of Merge Sort](img/merge_sort_bigO.jpg)
-[3]
+[3] Figure above: *How Merge Sort divides up the data*.
 
 When both arrays are sorted, we then walk through both arrays at same time and compare the lowest values which are then added to the sorted output array. 
 If one iteration completes then all the remaining elements of the other array are larger and can therefore be added to the sorted output array. 
@@ -498,15 +487,15 @@ To nutshell a search algorithm, we can describe it as such; *to find the positio
 
 There are 2 main algorithms that perform this task, and they are:
 
-- **Linear search** 
-  - *An algorithm that checks the list sequentially until the required value is found*
-- **Binary search**
-  - *This requires a sorted input list, it then looks for the value in the middle of the list. Then it recursively removes half of the list of values that are either larger or smaller than the required value.*
+**Linear search** 
+- *An algorithm that checks the list sequentially until the required value is found*
+**Binary search**
+- *This requires a sorted input list, it then looks for the value in the middle of the list. Then it recursively removes half of the list of values that are either larger or smaller than the required value.*
 
-Regarding Big O, let;s revisit the graph of functions to see which is more efficient than the next.
+Regarding Big O, lets revisit the graph of functions again to see the level of efficiency.
 
 ![Big O Comparison Graph](img/bigO_comparison_graphs.jpg)
-[1]
+[1] Figure above: *Big O Comparison Graph*.
 
 A little bit about each method.
 
@@ -535,16 +524,15 @@ The number of comparisons needed, scale with the size of the list again, but muc
 | Binary search |    O(1)   | O(log N) |  O(log N)  |
 
 
-he best case scenario for Binary Search happens when the first element of the list is the one we are looking for again, meaning only 1 search was required.
+The best case scenario for Binary Search happens when the first element of the list is the one we are looking for again, meaning only 1 search was required.
 
 
-The previous tables discuss Time Complexity of each search algorithms, but we can also describe their space complexity – which is the units of space required for storage, which excludes the space required to store the original input list.
+The previous tables discuss *'Time Complexity'* of our search algorithms, but we can also describe their space complexity – which is the units of space required for storage, excluding the space required to store the original input list.
 
 |   Algorithm   | Space complexity |
 |:-------------:|:----------------:|
 | Linear search |       O(1)       |
 | Binary search |       O(1)       |
-
 
 None of these algorithms require much storage space, excluding the size of the input list. [1]
 
@@ -577,7 +565,19 @@ Below is a table of all the software that is used in the creation of Fiverr. [1]
 
 According to an answer on Quora by Mohammed Jahangir Hossain, it seems that Rails is used for the backend framework [2].
 
-Looking at the listed technologies used, there is a substantial amount going on here. My guess is that it would seem that React is probably for parts/most of the frontend of the main website as they are using MEAN for their tech stack, but they don't list Angular or Express.js. And using both SQL and NoSQL databases in MongoDB and MySQL. There is a large mix of technologies at play here and there doesn't seem to be an site expressing exactly how they all integrate with one another.
+Looking at the listed technologies used, there is a substantial amount going on here. My guess is that it would seem that React is probably for parts/most of the frontend of the main website as they are using MEAN for their tech stack, but they don't list Angular or Express.js. And using both SQL and NoSQL databases in MongoDB and MySQL. There is a large mix of technologies at play here and there doesn't seem to be a
+
+
+
+
+
+
+
+
+
+
+
+233333333330  site expressing exactly how they all integrate with one another.
  
 <br>
 
@@ -589,19 +589,21 @@ CloudFlare provides protection from Distributed Denial of Service (DDoS) attacks
 
 Cloudfare does this with their new *(Gen X)* servers which are deployed across major US cities, and soon to be worldwide *(as of February 2020)*. Compared to their previous *(Gen 9)* servers, *pictured below*, *(Gen X)* processes 36% more requests while substantially more cosft-effective. [6]
 
+Cloudfare uses these servers to handle the load of DDoD attacks and also to mask Fiverr's IP Address.
+
 ![Cloudfare Gen 9 Server](img/cloudfare_gen_9.png)
-*Figure above: Cloudfare's Gen 9 Server*
+*Figure above: Cloudfare's Gen 9 Server*.
 
 ![Cloudfare Gen X Server](img/cloudfare_gen_x_server.jpg)
-*Figure above: Cloudfare's newest Gen X Server*
+*Figure above: Cloudfare's newest Gen X Server*.
 
  
 <br>
 
 ### **c) Interaction of Technologies**
 
-After exploring further, [w3techs | sites](https://w3techs.com/sites) was brought to my attention which gave more insight into Fiverr' tech stack. From here, it was seen that PHP and Ruby is used as the server-side languages and JavaScript as client-side. This makes me believe that Rails (alongside PHP) was used in combination with React and jQuery to build the majority of site. Maybe PHP was used to interact with one of the databases MySQL or MongoDB, and Rails the other [4].  
-Further estimates; 
+After exploring further, [w3techs | sites](https://w3techs.com/sites) was brought to my attention which gave more insight into Fiverr' tech stack. From here, it was seen that PHP and Ruby is used as the server-side languages and JavaScript as client-side. This makes me believe that Rails (alongside PHP) was used in combination with React and jQuery to build the majority of site.  [4].  
+Further estimates about their tech stack; 
 - HTML and Sass for the layouts/views
 - Android SDK for the Android app
 - Objective-C for the iOS app
@@ -615,7 +617,7 @@ Further estimates;
 - Go in combination with InfluxDB for more database options *(so many databases!)*
 - Sinatra as another micro-framework used somewhere
 - MEAN stack?
-- *unsure of Grape and Unicorn*
+- *unsure of Fiverr's use of Grape and Unicorn*
 
 <br>
 
@@ -625,7 +627,8 @@ Further estimates;
 As Fiverr uses both relational and non-relational databases, it is hard to say exactly how it is structured within the app. But, we can analyse how data is structured in both databases. 
 
 Fiverr Non-Relational Database: *MongoDB*
-- MongoDB is a no-SQL database that structures its data in a collection of JSON documents
+- MongoDB is a no-SQL database that structures its data in a collection of JSON documents.
+
 Fiverr Relational Database: *MySQL*
 - MySQL is an SQL database that structures its data in tables with rows and columns where one queries a table for a certain piece of data. Some of these pieces of data is related to another data set through an identifying key, which is where it gets its 'relational' name from. 
 
@@ -696,7 +699,7 @@ Looking around different parts of their website, these are some of the things I 
 
 ![ERD Diagram](img/fiverr_erd.png)
 
-As there was no information regarding the layout of Fiverr's database, but as can be seen in *Q14: (f)* I was to use an educated guess about the actual entities and relationships used in the site. I know that my interpretation will not be correct as I am but a student. But this is my interpretation on how some of the entities may be connected. 
+As there was no information regarding the layout of Fiverr's database, but as can be seen in *Q14: (f)*, I took an educated guess about the actual entities and relationships used in the site. I know that my interpretation will not be correct as I am but a student. But this is my interpretation on how some of the entities may be connected. 
 
 
 ***Resources Used:***  
