@@ -293,11 +293,7 @@ Control flow is an fundamental part of life, and programming language.
 <!-- For the code snippet provided below, write comments for each line of code to explain its functionality. In your comments you must demonstrates your ability to recognise and identify functions, ranges and classes -->
 <!-- Demonstrates an extensive ability to recognise functions, ranges and classes -->
 
-
-
-***Resources Used:***  
-[1] [StackShare](https://stackshare.io/fiverr/fiverr)  
-
+The comments to the code snippet can be found [here](./q13CodeSnippet.js).
 
 
 

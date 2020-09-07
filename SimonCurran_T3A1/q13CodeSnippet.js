@@ -40,7 +40,7 @@ let makes = ["Ford", "Holden", "Toyota"]
 //  Array.from creates an array from array-like objects
 // it also takes in an optional parameter which allows us to run a map() over each element being created
 // this code creates an array with 40 items, where the first item starts at 1980 and the last finishes at 2019, 
-// increasing by 1 each iteration
+  // increasing by 1 each iteration
 let models = Array.from(new Array(40), (x,i) => i + 1980)
 
 
@@ -55,7 +55,7 @@ for (model of models) {
   // a for loop that runs 40 times (i.e. length of the models array)
   // it then gets a random number between 0 and 2 and returns a string out of that array to use in the creation of the instance
   // then gets another random number between 0 and 2 which returns a random to use in the creation of the instance
-      // (Note for assignment marker: I'm guessing this should have been models.length?)
+    // (Note for assignment marker: I'm guessing this should have been models.length?)
   make = makes[randomIntFromInterval(0,makes.length-1)]
   model = models[randomIntFromInterval(0,makes.length-1)]
     
