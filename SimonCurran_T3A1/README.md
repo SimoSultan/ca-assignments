@@ -214,11 +214,64 @@ The largest lack of knowledge for me was my experience with 'Ruby on Rails'. No 
 ## Q7:
 <!-- Explain control flow, using an example from the JavaScript programming language -->
 <!-- Provides a thorough explanation of control flow in programming -->
-Control flow is an fundamental part of life, and programming language. 
+Control flow is an fundamental part of life and a programming language. We can demonstrate control flow in JavaScript with a human example.
+
+```js
+if (youre_hungry) {
+  return "go eat"
+} else {
+  return "don't eat"
+}
+```
+
+We can write this code in shorthand, i.e. a one-liner with the ternary operator
+
+```js
+return (youre_hungry) ? "go eat" : "don't eat"
+```
+
+We can add additional if blocks to the original statement as well:
+
+```js
+if (youre_tired) {
+  return "go sleep"
+} else if (youre_exhausted) {
+  return "lie down and rest"
+} else {
+  return "carry on"
+}
+```
+
+However, writing out all these 'else if' statements can get tedious and end up being messy. This is where we can use the JavaScript **'switch'** statement to clean this code up. As seen below:
+
+```js
+switch (tiredness) {
+  case youre_tired:
+    return "go sleep"
+  case youre_exhausted:
+    return "lie down and rest"
+  default:
+    return "carry on"
+}
+```
+
+If we weren't returning out of this switch statement, and wanted to execute some side-effect code, we can use the keyword *'break'* to exit out of the switch case and continue onto our next bit of code in the function/app.
+
+Another thing we can also do with the switch statement in out control flow processes is short-circuit a case. So if we want both the youre_tired and youre_exhausted cases to return in the string "lie down and rest" we can write it like this:
+
+```js
+switch (tiredness) {
+  case youre_tired:
+  case youre_exhausted:
+    return "lie down and rest"
+  default:
+    return "carry on"
+}
+```
+
 
 ***Resources Used:***  
-[1] [PressBooks](https://bus206.pressbooks.com/chapter/chapter-6-information-systems-security/)
-
+[1] [Simon Curran's T1A1 Workbook](https://github.com/SimoSultan/ca-assignments/tree/master/SimonCurran_T1A1#Q8)
 
 
 ----
@@ -229,9 +282,48 @@ Control flow is an fundamental part of life, and programming language.
 <!-- Explain type coercion, using examples from the JavaScript programming language -->
 <!-- Provides a thorough explanation of type coercion in programming -->
 
+> "Type coercion is the automatic or implicit conversion of values from one data type to another (such as strings to numbers)." [2]
 
-***Resources Used***  
-[1] [Australian Government | Office of the Australian Information Commissioner](https://www.oaic.gov.au/privacy/australian-privacy-principles/)  
+There are 2 types of coercion: Implicit vs Explicit.
+
+- **Implicit Coercion** *Implicit Coercion can be a blessing and a curse. We can use it to add an integer to the end of a string, seen below.*
+
+```js
+const string = 'A dog has this many legs: ';
+const value2 = 4;
+let sum = string + value2;
+
+console.log(sum); // => logging the string 'A dog has this many legs: 4' to the console
+```
+
+However, we can also get into trouble, seen below in the example:
+
+```js
+let a = '9';  // class String
+let b = 9;    // class Integer
+
+a == b        // => true
+a === b       // => false
+```
+
+Here we receive 2 different values. Because in the first comparison, we do do an implicit comparison, which does not include type, only the value. But in the second, we also compare type, as a String is not equal to an Integer, it returns false.
+
+
+- **Explicit Coercion** *When we explicitly coerce a string to an integer for example. Demonstrating this in the example below.*
+
+```js
+let num = '6';
+num = Number(num);
+```
+Here we a explicitly telling the compiler to change the string of '6' into an integer.
+
+
+There are many more examples of type coercion in JavaScript. We should not try to remember every scenario, just understand the basics behind this concept and ensure our code checks or ignore type for specific situations. 
+However, in my opinion, explicit coercion is better as it is makes the code more readable to another person what we are trying to achieve.
+
+***Resources Used:***  
+[1] [Simon Curran's T1A1 Workbook](https://github.com/SimoSultan/ca-assignments/tree/master/SimonCurran_T1A1#Q9)  
+[2] [MDN](https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion)
 
 
 
@@ -243,8 +335,8 @@ Control flow is an fundamental part of life, and programming language.
 <!-- Explain data types, using examples from the JavaScript programming language -->
 <!-- Provides a thorough explanation of data types in programming -->
 
-***Resources Used:***   
-[1] [Omni-Sci](https://www.omnisci.com/technical-glossary/relational-database)  
+***Resources Used:***
+[1] [Simon Curran's T1A1 Workbook](https://github.com/SimoSultan/ca-assignments/tree/master/SimonCurran_T1A1#10)
 
 
 
@@ -257,8 +349,8 @@ Control flow is an fundamental part of life, and programming language.
 <!-- Explain how arrays can be manipulated in JavaScript, using examples from the JavaScript programming language -->
 <!-- Demonstrates an extensive ability to manipulate arrays -->
 
-***Resources Used:***   
-[1] [O'Reilly](https://www.oreilly.com/library/view/sql-and-relational/9781449319724/ch01s04.html)  
+***Resources Used:***
+[1] [Simon Curran's T1A1 Workbook](https://github.com/SimoSultan/ca-assignments/tree/master/SimonCurran_T1A1#10)
  
 
 
@@ -271,8 +363,8 @@ Control flow is an fundamental part of life, and programming language.
 <!-- Explain how objects can be manipulated in JavaScript, using examples from the JavaScript programming language -->
 <!-- Demonstrates an extensive ability to manipulate objects -->
 
-***Resources Used:***   
-[1] [Guru99](https://www.guru99.com/relational-data-model-dbms.html/)  
+***Resources Used:***
+[1] [Simon Curran's T1A1 Workbook](https://github.com/SimoSultan/ca-assignments/tree/master/SimonCurran_T1A1#10)
 
 
 
@@ -285,6 +377,11 @@ Control flow is an fundamental part of life, and programming language.
 <!-- Explain how JSON can be manipulated in JavaScript, using examples from the JavaScript programming language -->
 <!-- Demonstrates an extensive ability to manipulate JSON -->
 
+
+***Resources Used:***
+<!-- [1] [Simon Curran's T1A1 Workbook](https://github.com/SimoSultan/ca-assignments/tree/master/SimonCurran_T1A1#10) -->
+
+
 ----
 
 
@@ -294,6 +391,9 @@ Control flow is an fundamental part of life, and programming language.
 <!-- Demonstrates an extensive ability to recognise functions, ranges and classes -->
 
 The comments to the code snippet can be found [here](./q13CodeSnippet.js).
+
+
+***No Resources Used:***
 
 
 

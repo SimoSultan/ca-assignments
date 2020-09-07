@@ -14,6 +14,14 @@ class Car {
 }
 
 
+switch (key) {
+  case value:
+    
+    break;
+
+  default:
+    break;
+}
 
 class Model extends Car {
   // the child class that inherits from its parent 'Car'
