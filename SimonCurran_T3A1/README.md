@@ -140,6 +140,45 @@ Let's take a closer look at the Controller *(Business Logic Tier)* structure of 
 <!-- A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project? -->
 <!-- Effectively describes a range of skills and knowledge required by IT workers to complete a quality web development project -->
 
+For a small business to develop a website, these are the skills and knowledge required under their respective categories to complete the task in an approximate order.
+
+#### Software Skills and Knowledge Base
+- Platform/s for development [3]
+- Source/version control
+- Design and UI/UX [1]
+- Database (potentially) [4]
+- Programming languages (frameworks and libraries) [1]
+- Security [1]
+- Testing [1]
+- Mobile Support [4]
+- Documentation
+
+For a business to build a professional site for a client, there are many technological skills involved in the process. For a quick rundown; the platforms the site needs to run on are needed; the source control workflow to be used throughout development; the design of the site on each platform; if a database is needed, and if so, which one and how it is to be set up; which frameworks and libraries to use; the types of security risks for the site; manual/automated tests to run; type of mobile support and documentation for the site is all to be completed.
+
+
+#### Business Skills and Knowledge Base
+- Business / Client management [2]
+- Project / Time management [1] [4]
+- Cost
+
+First the business must communicate with the client to determine the site they are after to provide a quote/cost to the client. The business must also be able to manage its staff and set goals to complete the task at hand in the most efficient manner, if the client accepts the quote. 
+
+#### Other Skills and Knowledge Base
+- SEO / Digital Marketing / Social Media [1] [2]
+- Communication [2]
+- Psychology [4]
+
+These skills listed above are just as important as any. Communication is an absolute fundamental part to this project. We can use a carpenter's quote here for a metaphor:  
+> "Measure twice, cut once!"
+
+If there is bad communication between the business and client, and the project was misinterpreted, then the client will not be happy with the final product and a potential re-design might be on the cards, blowing out the cost of the project, leaving a very unhappy customer. Also, if the job is not communicated over to the staff in effective manner with strong time management goals put in place, again the cost can blow out again, resulting in another unhappy customer. Also, the business needs to ensure the customer's site can be found with ease on an internet search, so marketing and SEO's are of upmost importance if the customer is trying to sell a product. Psychology plays a role also by having the designers and developers understand how the clients' customers are actually going to use the site. If the site has bad UI/UX, then customers won't use the site and the client is also going to be very unhappy again. These last 3 could be considered some of the hardest topics in website design. Something I am sure many companies fumble on. 
+
+
+***Resources Used:***  
+[1] [One Xtra Pixel](https://onextrapixel.com/12-skills-you-need-to-develop-a-website/)  
+[2] [Skill Crush](https://skillcrush.com/blog/be-a-successful-web-designer/)  
+[3] [David Meerman Scott](https://www.davidmeermanscott.com/blog/the-5-essential-skills-required-for-building-an-effective-website)  
+[4] [Medium](https://medium.com/@inkbotdesign/14-skills-you-need-to-build-a-strong-web-design-career-394545ee91e4)  
 
 
 
